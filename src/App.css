@@ -1,0 +1,76 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*my css*/
+
+
+.header .navBar {
+  width: 100%;
+}
+
+.header .navBar .nav {
+  width: 80%;
+}
+
+.main {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+}
+
+.main .hero {
+  width: 80%;
+  display: flex;
+  gap: 5%;
+  margin-bottom: 30px;
+}
+
+.main .hero .carousel {
+  width: 60%;
+}
+
+/* .main .hero .tabsNav {} */
+
+.main .cards {
+  width: 80%;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
+}
