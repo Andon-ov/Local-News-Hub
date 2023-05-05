@@ -3,36 +3,51 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './App.css';
 
-import Carousel from './components/Carousel';
-import Nav from './components/Nav';
-import TabsNav from './components/TabsNav';
+import Nav from './components/header/Nav';
+// import TabsNav from './components/TabsNav';
 import Card from './components/Card';
+import Hero from './components/Hero';
+
+import HorizontalCard from './components/HorizontalCard';
+
+import LogoAndAd from './components/header/LogoAndAd';
 
 function App() {
   return (
     <>
       <header className="header">
+        <LogoAndAd />
         <Nav />
       </header>
-      <main className="main">
-        <section className="hero">
-          <Carousel />
-          <TabsNav />
-        </section>
-        <section className="cards">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-        </section>
-      </main>
-      <footer className="footer"></footer>
+      <section className="wrapper">
+        <main className="main">
+          <Hero />
+          <div>
+            <h2 className="sectionTitle">Latest News</h2>
+          </div>
+          <section className="cards">
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+          </section>
+        </main>
+        <aside className="aside">
+          {/* <TabsNav /> */}
+          <HorizontalCard />
+          <HorizontalCard />
+          <HorizontalCard />
+          <HorizontalCard />
+          <HorizontalCard />
+        </aside>
+      </section>
+      <footer className="footer">Copyright &copy; 2023 News Portal</footer>
     </>
   );
 }

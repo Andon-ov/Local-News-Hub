@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -36,41 +36,119 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
 /*my css*/
 
+/* header */
+
+.header .logo {
+  width: 100%;
+  padding: 1% 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
 
 .header .navBar {
   width: 100%;
+  padding: 1% 10%;
 }
 
-.header .navBar .nav {
+/* wrapper */
+.wrapper {
   width: 80%;
+  margin: 1% 10%;
+  display: grid;
+  gap: 2%;
+  grid-template-columns: 70% 28%;
 }
 
-.main {
+.wrapper .main {
   width: 100%;
   display: grid;
   justify-items: center;
+  place-self: center;
 }
 
-.main .hero {
-  width: 80%;
+.wrapper .main .hero {
   display: flex;
-  gap: 5%;
+  flex-direction: column;
   margin-bottom: 30px;
 }
 
-.main .hero .carousel {
-  width: 60%;
+.wrapper .main .hero .heroTitle {
+  width: 100%;
+  margin-bottom: 2%;
 }
 
-/* .main .hero .tabsNav {} */
+.wrapper .main .hero .carousel {
+  width: 100%;
+  border: 1px solid black;
+}
 
-.main .cards {
-  width: 80%;
+.wrapper .main .cards {
+  width: 100%;
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(5, 1fr);
+}
+
+.wrapper .aside {
+  margin: 4% 0;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 1% 10%;
+  background-color: #212529;
+  color: white;
+}
+
+.sectionTitle {
+  text-align: center;
+  padding-bottom: 8%;
+}
+
+.horizontalCard {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: 100px;
+  gap: 10px;
+  color: black;
+  text-decoration: none;
+
+  
+}
+
+.horizontalCard .figure .figure-img {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-tabs {
+  margin-bottom: 2%;
+}
+
+.nav-tabs .nav-link {
+  color: black;
+}
+
+.nav-tabs .nav-link:hover {
+  color: blue;
+}
+
+.info {
+  text-align: right;
+}
+
+
+.cardBody{
+
+  overflow: hidden;
+
+}
+.badge {
+  margin-right: 10px;
 }
