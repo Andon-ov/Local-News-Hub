@@ -1,4 +1,3 @@
-
 import Card from 'react-bootstrap/Card';
 
 function BasicExample({news}) {
@@ -14,18 +13,19 @@ function BasicExample({news}) {
 
         return dateObj.toLocaleDateString();
     }
-  return (
-      <Card className='card'>
-      <Card.Img variant="top" src={news.urlToImage} />
-      <Card.Body>
-        <Card.Title>{news.title}</Card.Title>
-        {/*<Card.Text>*/}
-        {/*    {news.description}*/}
-        {/*</Card.Text>*/}
-      </Card.Body>
-      <Card.Footer className="text-muted">{formatDate()}</Card.Footer>
-    </Card>
-  );
+
+    return (
+        <Card className='card'>
+            <Card.Img variant="top" src={news.urlToImage}/>
+            <Card.Body>
+                <Card.Title>{news.title}</Card.Title>
+                {/*<Card.Text>*/}
+                {/*    {news.description}*/}
+                {/*</Card.Text>*/}
+            </Card.Body>
+            <Card.Footer className="text-muted">{formatDate()}</Card.Footer>
+        </Card>
+    );
 }
 
 export default BasicExample;

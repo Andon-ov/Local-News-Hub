@@ -25,22 +25,23 @@
 //   );
 // }
 
-import React from 'react';  
+import React from 'react';
 import Card from 'react-bootstrap/Card';
 
-const HorizontalCard = ({ imageSrc, title, date }) => {
-  return (
-    <Card className="horizontalCard"
-    //  style={{ width: '18rem' }}
-     >
-      <Card.Img variant="left"      src="https://radio999bg.com/images/radio999bg/cache/news/atraktsii-predizvikatelstva-priklyucheniya-evropeyskata-nosht-muzeite-yambol-155x100.jpg"
- />
-      <Card.Body>
-        <Card.Title>Title</Card.Title>
-        <Card.Text>Date</Card.Text>
-      </Card.Body>
-    </Card>
-  );
+const HorizontalCard = ({imageSrc, title, date}) => {
+    return (
+        <Card className="horizontalCard"
+            //  style={{ width: '18rem' }}
+        >
+            <Card.Img variant="left"
+                      src="https://radio999bg.com/images/radio999bg/cache/news/atraktsii-predizvikatelstva-priklyucheniya-evropeyskata-nosht-muzeite-yambol-155x100.jpg"
+            />
+            <Card.Body>
+                <Card.Title>Title</Card.Title>
+                <Card.Text>Date</Card.Text>
+            </Card.Body>
+        </Card>
+    );
 };
 
 export default HorizontalCard;
