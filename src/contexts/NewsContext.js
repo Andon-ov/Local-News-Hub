@@ -1,23 +1,25 @@
-import { createContext, useState, useEffect } from 'react';
+import {createContext, useEffect, useState} from 'react';
 
 export const NewsContext = createContext([]);
 
-export const NewsProvider = ({ children }) => {
-  const [news, setNews] = useState([]);
+export const NewsProvider = ({children}) => {
+    const [news, setNews] = useState([]);
 
-  useEffect(() => {
+    useEffect(() => {
 
-    fetch('http://localhost:3030/data/news')
-    
-      .then((res) => res.json())
+        fetch('http://localhost:3030/data/news')
 
-      .then((news) => {
-        setNews(news);
-      })
-      .catch((error) => console.log(error));
-  }, []);
+            .then((res) => res.json())
 
-  return (
-    <NewsContext.Provider value={{ news }}>{children}</NewsContext.Provider>
-  );
+            .then((news) => {
+                setNews(news);
+            })
+            .catch((error) => console.log(error));
+    }, []);
+
+    return (
+        <NewsContext.Provider value={{news}}>
+            {children}
+        </NewsContext.Provider>
+    );
 };

@@ -1,32 +1,29 @@
-import React from 'react';
-import { Carousel } from 'react-bootstrap';
-
-import { useContext } from 'react';
-import { NewsContext } from '../../contexts/NewsContext';
+import React, {useContext} from 'react';
+import {Carousel} from 'react-bootstrap';
+import {NewsContext} from '../../contexts/NewsContext';
 
 const HeroCarousel = () => {
 
-  const { news } = useContext(NewsContext);
-    console.log(news);
-  return (
+    const {news} = useContext(NewsContext);
+    return (
 
-    <Carousel className='carousel'>
+        <Carousel className='carousel' wrap fade>
 
-      {news
-      .filter((x) => x.type === 'hot')
-      .map((slide, index) => (
-        <Carousel.Item className='carouselImg' key={index}>
+            {news
+                .filter((x) => x.type === 'hot')
+                .map((slide, index) => (
+                    <Carousel.Item key={index}>
 
-          <img src={slide.urlToImage} alt={slide.title} />
-          <Carousel.Caption>
-            <h3>{slide.title}</h3>
+                        <img src={slide.urlToImage} className='carouselImg' alt={slide.title}/>
+                        <Carousel.Caption>
+                            <h3>{slide.title}</h3>
 
-          </Carousel.Caption>
-        </Carousel.Item>
-      ))}
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                ))}
 
-    </Carousel>
-  );
+        </Carousel>
+    );
 };
 
 export default HeroCarousel;

@@ -1,9 +1,7 @@
 import Card from 'react-bootstrap/Card';
 
 function VerticalCard({news}) {
-
     function formatDate(date) {
-
         const now = new Date();
         const dateObj = new Date(news.publishedAt);
 
@@ -18,10 +16,24 @@ function VerticalCard({news}) {
     }
 
     return (
-        <Card className='card'>
-            <Card.Img variant="top" className='verticalCardImg' src={news.urlToImage}/>
+        <Card>
+            <Card.Img
+                variant="top"
+                className="verticalCardImg"
+                src={news.urlToImage}
+            />
             <Card.Body>
-                <Card.Title>{news.title}</Card.Title>
+                <Card.Title
+                    style={{
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
+                        display: '-webkit-box',
+                        WebkitLineClamp: 5,
+                        WebkitBoxOrient: 'vertical',
+                    }}
+                >
+                    {news.title}
+                </Card.Title>
                 {/*<Card.Text>*/}
                 {/*    {news.description}*/}
                 {/*</Card.Text>*/}
@@ -32,5 +44,3 @@ function VerticalCard({news}) {
 }
 
 export default VerticalCard;
-
-
