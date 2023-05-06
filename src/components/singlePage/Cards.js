@@ -10,7 +10,6 @@ function Cards() {
     <section className="cards">
       {news.map((item) => (
         <Card key={item._id} news={item} />
-        // <div key={item._id}>{item.title}</div>
       ))}
     </section>
   );

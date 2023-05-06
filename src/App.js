@@ -13,6 +13,7 @@ import { NewsProvider } from './contexts/NewsContext';
 
 import { Routes, Route, } from 'react-router-dom';
 import Login from './components/Login';
+import Aside from './components/singlePage/Aside';
 
 function App() {
   return (
@@ -36,13 +37,11 @@ function App() {
               </div>
               <Cards />
             </main>
-            <aside className="aside">
-              <HorizontalCard />
-              <HorizontalCard />
-              <HorizontalCard />
-              <HorizontalCard />
-              <HorizontalCard />
-            </aside>
+       
+              <Aside/>
+
+
+   
           </section>
           <footer className="footer">Copyright &copy; 2023 News Portal</footer>
         </>

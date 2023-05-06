@@ -28,17 +28,18 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 
-const HorizontalCard = ({imageSrc, title, date}) => {
+
+const HorizontalCard = ({news}) => {
     return (
         <Card className="horizontalCard"
             //  style={{ width: '18rem' }}
         >
-            <Card.Img variant="left"
-                      src="https://radio999bg.com/images/radio999bg/cache/news/atraktsii-predizvikatelstva-priklyucheniya-evropeyskata-nosht-muzeite-yambol-155x100.jpg"
+            <Card.Img variant="left" className='horizontalCardImg'
+                      src={news.urlToImage}
             />
             <Card.Body>
-                <Card.Title>Title</Card.Title>
-                <Card.Text>Date</Card.Text>
+                <Card.Title>{news.title}</Card.Title>
+                <Card.Text>{news.publishedAt}</Card.Text>
             </Card.Body>
         </Card>
     );
