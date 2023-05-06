@@ -1,7 +1,9 @@
 import Card from 'react-bootstrap/Card';
 
-function BasicExample({news}) {
+function VerticalCard({news}) {
+
     function formatDate(date) {
+
         const now = new Date();
         const dateObj = new Date(news.publishedAt);
 
@@ -9,14 +11,15 @@ function BasicExample({news}) {
             return 'today';
         }
 
-        // Add more conditions for displaying other relative date strings, such as "yesterday" or "last week"
+        // Add more conditions for displaying other relative date strings,
+        //  such as "yesterday" or "last week"
 
         return dateObj.toLocaleDateString();
     }
 
     return (
         <Card className='card'>
-            <Card.Img variant="top" src={news.urlToImage}/>
+            <Card.Img variant="top" className='verticalCardImg' src={news.urlToImage}/>
             <Card.Body>
                 <Card.Title>{news.title}</Card.Title>
                 {/*<Card.Text>*/}
@@ -28,4 +31,6 @@ function BasicExample({news}) {
     );
 }
 
-export default BasicExample;
+export default VerticalCard;
+
+

@@ -9,38 +9,46 @@ import Cards from './components/singlePage/Cards';
 import Hero from './components/singlePage/Hero';
 import HorizontalCard from './components/singlePage/HorizontalCard';
 import LogoAndAd from './components/singlePage/LogoAndAd';
-import {NewsProvider} from './contexts/NewsContext';
+import { NewsProvider } from './contexts/NewsContext';
+
+import { Routes, Route, } from 'react-router-dom';
+import Login from './components/Login';
 
 function App() {
-    return (
-        <CustomErrorBoundary>
-            <NewsProvider>
-                <>
-                    <header className="header">
-                        <LogoAndAd/>
-                        <Nav/>
-                    </header>
-                    <section className="wrapper">
-                        <main className="main">
-                            <Hero/>
-                            <div>
-                                <h2 className="sectionTitle">Latest News</h2>
-                            </div>
-                            <Cards/>
-                        </main>
-                        <aside className="aside">
-                            <HorizontalCard/>
-                            <HorizontalCard/>
-                            <HorizontalCard/>
-                            <HorizontalCard/>
-                            <HorizontalCard/>
-                        </aside>
-                    </section>
-                    <footer className="footer">Copyright &copy; 2023 News Portal</footer>
-                </>
-            </NewsProvider>
-        </CustomErrorBoundary>
-    );
+  return (
+    <CustomErrorBoundary>
+      <NewsProvider>
+        <>
+          <header className="header">
+            <LogoAndAd />
+            <Nav />
+          </header>
+
+          {/*<Routes>*/}
+          {/*  <Route path="/login" element={<Login />} />*/}
+          {/*</Routes>*/}
+
+          <section className="wrapper">
+            <main className="main">
+              <Hero />
+              <div>
+                <h2 className="sectionTitle">Latest News</h2>
+              </div>
+              <Cards />
+            </main>
+            <aside className="aside">
+              <HorizontalCard />
+              <HorizontalCard />
+              <HorizontalCard />
+              <HorizontalCard />
+              <HorizontalCard />
+            </aside>
+          </section>
+          <footer className="footer">Copyright &copy; 2023 News Portal</footer>
+        </>
+      </NewsProvider>
+    </CustomErrorBoundary>
+  );
 }
 
 export default App;

@@ -5,19 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fb7cccc-c600-4032-9bbe-748ac4d2139c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/local-news-hub.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/singlePage/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/singlePage/Card.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/singlePage/Cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/singlePage/Cards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/singlePage/Carousel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/singlePage/Hero.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/singlePage/Hero.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/singlePage/HorizontalCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/singlePage/HorizontalCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/singlePage/LogoAndAd.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/singlePage/LogoAndAd.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/singlePage/Nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/singlePage/Nav.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/NewsProvider.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/newsContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/NewsContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/newsService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/newsService.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +53,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1683375538354</updated>
-      <workItem from="1683375542668" duration="728000" />
+      <workItem from="1683375542668" duration="2116000" />
     </task>
     <servers />
   </component>
