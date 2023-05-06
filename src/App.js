@@ -3,17 +3,19 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './App.css';
 
-import Nav from './components/header/Nav';
+import Nav from './components/singlePage/Nav';
 // import TabsNav from './components/TabsNav';
-import Card from './components/Card';
-import Hero from './components/Hero';
+import Cards from './components/singlePage/Cards';
+import Hero from './components/singlePage/Hero';
 
-import HorizontalCard from './components/HorizontalCard';
+import HorizontalCard from './components/singlePage/HorizontalCard';
 
-import LogoAndAd from './components/header/LogoAndAd';
+import LogoAndAd from './components/singlePage/LogoAndAd';
+import { NewsProvider } from './contexts/newsContext';
 
 function App() {
   return (
+    <NewsProvider>
     <>
       <header className="header">
         <LogoAndAd />
@@ -25,18 +27,7 @@ function App() {
           <div>
             <h2 className="sectionTitle">Latest News</h2>
           </div>
-          <section className="cards">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-          </section>
+          <Cards />
         </main>
         <aside className="aside">
           {/* <TabsNav /> */}
@@ -49,6 +40,7 @@ function App() {
       </section>
       <footer className="footer">Copyright &copy; 2023 News Portal</footer>
     </>
+    </NewsProvider>
   );
 }
 
