@@ -1,4 +1,5 @@
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 
 function VerticalCard({news}) {
     function formatDate(date) {
@@ -8,7 +9,6 @@ function VerticalCard({news}) {
         if (dateObj.toDateString() === now.toDateString()) {
             return 'today';
         }
-
         // Add more conditions for displaying other relative date strings,
         //  such as "yesterday" or "last week"
 
@@ -16,30 +16,29 @@ function VerticalCard({news}) {
     }
 
     return (
-        <Card>
-            <Card.Img
-                variant="top"
-                className="verticalCardImg"
-                src={news.urlToImage}
-            />
-            <Card.Body>
-                <Card.Title
-                    style={{
-                        overflow: 'hidden',
-                        textOverflow: 'ellipsis',
-                        display: '-webkit-box',
-                        WebkitLineClamp: 5,
-                        WebkitBoxOrient: 'vertical',
-                    }}
-                >
-                    {news.title}
-                </Card.Title>
-                {/*<Card.Text>*/}
-                {/*    {news.description}*/}
-                {/*</Card.Text>*/}
-            </Card.Body>
-            <Card.Footer className="text-muted">{formatDate()}</Card.Footer>
-        </Card>
+        <Link to="/details">
+             <Card>
+                <Card.Img
+                    variant="top"
+                    className="verticalCardImg"
+                    src={news.urlToImage}
+                />
+                <Card.Body>
+                    <Card.Title
+                        style={{
+                            overflow: 'hidden',
+                            textOverflow: 'ellipsis',
+                            display: '-webkit-box',
+                            WebkitLineClamp: 5,
+                            WebkitBoxOrient: 'vertical',
+                        }}
+                    >
+                        {news.title}
+                    </Card.Title>
+                </Card.Body>
+                <Card.Footer className="text-muted">{formatDate()}</Card.Footer>
+            </Card>
+        </Link>
     );
 }
 

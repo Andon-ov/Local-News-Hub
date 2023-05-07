@@ -1,39 +1,31 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import {useNavigate} from 'react-router-dom';
-import * as authService from '../services/authService';
+// to use context we need to import 'useContext' and 'AuthContext'
 import {useContext} from 'react';
 import {AuthContext} from '../contexts/AuthContext';
 
-const Login = () => {
+// import Navigate from react-router-dom 6 to navigate wherever we want
+import {useNavigate} from 'react-router-dom';
+
+// import authService to use func from them
+import * as authService from '../services/authService';
+
+
+function Register() {
     const {login} = useContext(AuthContext);
     const navigate = useNavigate();
 
-    async function onSubmit(e) {
+    const registerSubmitHandler = (e) => {
         e.preventDefault();
-        const formData = new FormData(e.currentTarget);
 
-        const email = formData.get('email');
-        const password = formData.get('password');
+        let {email, password} = Object.fromEntries(new FormData(e.currentTarget));
+        console.log(email, password);
+        authService.register(email, password).then((authData) => {
+            login(authData);
+            navigate('/');
+        });
+    };
 
-        authService
-            .login({
-                email,
-                password,
-            })
-            .then((user) => {
-
-
-                // give user data to func from context 'login'
-                login(user);
-
-                // navigate to dashboard after login
-                navigate('/');
-            })
-            .catch((error) => alert(error.message));
-
-
-    }
 
     return (
         <div style={{
@@ -42,7 +34,7 @@ const Login = () => {
             alignItems: 'center',
             height: '75vh'
         }}>
-            <Form onSubmit={onSubmit}>
+            <Form onSubmit={registerSubmitHandler}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
                     <Form.Control type="email" placeholder="Enter email" name='email'/>
@@ -65,4 +57,4 @@ const Login = () => {
         </div>
     );
 };
-export default Login;
+export default Register;
