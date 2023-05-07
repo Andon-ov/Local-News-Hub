@@ -4,11 +4,9 @@ const baseUrl = 'http://localhost:3030';
 // login auth
 export const login = async (user) => {
     let res = await fetch(`${baseUrl}/users/login`, {
-        method: 'POST',
-        headers: {
+        method: 'POST', headers: {
             'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(user),
+        }, body: JSON.stringify(user),
     });
 
     if (!res.ok) {
@@ -25,21 +23,17 @@ export const login = async (user) => {
 // logout
 export const logout = (token) => {
     return fetch(`${baseUrl}/users/logout`, {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json',
-            'X-Authorization': token,
+        method: 'GET', headers: {
+            'Content-Type': 'application/json', 'X-Authorization': token,
         },
     });
 };
 
 export const register = async (email, password) => {
     let res = await fetch(`${baseUrl}/users/register`, {
-        method: 'POST',
-        headers: {
+        method: 'POST', headers: {
             'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({email, password}),
+        }, body: JSON.stringify({email, password}),
     });
 
     if (!res.ok) {

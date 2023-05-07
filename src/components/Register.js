@@ -35,6 +35,8 @@ function Register() {
             height: '75vh'
         }}>
             <Form onSubmit={registerSubmitHandler}>
+                <h1>Register</h1>
+                <br/>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
                     <Form.Control type="email" placeholder="Enter email" name='email'/>

@@ -3,9 +3,7 @@ import {createContext, useContext} from 'react';
 import useLocalStorage from '../hooks/useLocalStorage';
 
 const initialAuthState = {
-    _id: '',
-    email: '',
-    accessToken: '',
+    _id: '', email: '', accessToken: '',
 };
 
 export const AuthContext = createContext();
@@ -21,11 +19,9 @@ export const AuthProvider = ({children}) => {
         setUser(initialAuthState);
     };
 
-    return (
-        <AuthContext.Provider value={{user, login, logout, isAuthenticated: user.email}}>
+    return (<AuthContext.Provider value={{user, login, logout, isAuthenticated: user.email}}>
             {children}
-        </AuthContext.Provider>
-    );
+        </AuthContext.Provider>);
 };
 
 export const useAuthContext = () => {

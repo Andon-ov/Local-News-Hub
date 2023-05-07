@@ -14,6 +14,7 @@ import Login from './components/Login';
 import SinglePage from './components/singlePage/singlePage';
 import Register from './components/Register';
 import Logout from './components/Logout';
+import Details from './components/Details';
 
 
 function App() {
@@ -21,7 +22,6 @@ function App() {
     return (
         <CustomErrorBoundary>
             <AuthProvider>
-
                 <NewsProvider>
                     <Router>
                         <>
@@ -35,6 +35,7 @@ function App() {
                                 <Route path="/register" element={<Register/>}/>
                                 <Route path="/logout" element={<Logout/>}/>
                                 <Route path="/" element={<SinglePage/>}/>
+                                <Route path="/news/:newsId" element={<Details/>}/>
                             </Routes>
 
                             <footer className="footer">

@@ -1,5 +1,7 @@
 import {createContext, useEffect, useState} from 'react';
 
+import * as newsService from '../services/newsService';
+
 export const NewsContext = createContext([]);
 
 export const NewsProvider = ({children}) => {
@@ -7,19 +9,14 @@ export const NewsProvider = ({children}) => {
 
     useEffect(() => {
 
-        fetch('http://localhost:3030/data/news')
-
-            .then((res) => res.json())
-
+        newsService.getAll()
             .then((news) => {
                 setNews(news);
             })
             .catch((error) => console.log(error));
     }, []);
 
-    return (
-        <NewsContext.Provider value={{news}}>
+    return (<NewsContext.Provider value={{news}}>
             {children}
-        </NewsContext.Provider>
-    );
+        </NewsContext.Provider>);
 };
