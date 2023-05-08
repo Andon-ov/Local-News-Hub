@@ -3,10 +3,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 import CustomErrorBoundary from './components/CustomErrorBoundary';
-import {NewsProvider} from './contexts/NewsContext';
-import {AuthProvider} from './contexts/AuthContext';
+import { NewsProvider } from './contexts/NewsContext';
+import { AuthProvider } from './contexts/AuthContext';
 
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Nav from './components/singlePage/Nav';
 import LogoAndAd from './components/singlePage/LogoAndAd';
@@ -15,6 +15,9 @@ import SinglePage from './components/singlePage/singlePage';
 import Register from './components/Register';
 import Logout from './components/Logout';
 import Details from './components/Details';
+import Aside from './components/aside/Aside';
+import NoMatch from './components/NoMatch';
+
 
 
 function App() {
@@ -26,17 +29,23 @@ function App() {
                     <Router>
                         <>
                             <header className="header">
-                                <LogoAndAd/>
-                                <Nav/>
+                                <LogoAndAd />
+                                <Nav />
                             </header>
 
-                            <Routes>
-                                <Route path="/login" element={<Login/>}/>
-                                <Route path="/register" element={<Register/>}/>
-                                <Route path="/logout" element={<Logout/>}/>
-                                <Route path="/" element={<SinglePage/>}/>
-                                <Route path="/news/:newsId" element={<Details/>}/>
-                            </Routes>
+                            <section className="wrapper">
+                                <Routes>
+                                    <Route path="/login" element={<Login />} />
+                                    <Route path="/register" element={<Register />} />
+                                    <Route path="/logout" element={<Logout />} />
+                                    <Route path="/" element={<SinglePage />} />
+                                    <Route path="/news/:newsId" element={<Details />} />
+                                    <Route path="*" element={<NoMatch />} />
+                                </Routes>
+                                <Aside />
+                            </section>
+
+
 
                             <footer className="footer">
                                 Copyright &copy; 2023 News Portal
