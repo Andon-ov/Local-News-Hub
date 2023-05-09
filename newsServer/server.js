@@ -1283,6 +1283,7 @@
                 "urlToImage": "https://techcrunch.com/wp-content/uploads/2023/05/GettyImages-1249130192.jpg?resize=1200,777",
                 "publishedAt": "2023-05-02T13:36:40Z",
                 "type":'hot',
+                "category":"Jambol",
                 "content": "Citymapper is lowering the paywall around its premium features and introducing a new subscription plan purely for removing ads.\r\nThe move comes less than two months after the popular transit and trav… [+1931 chars]"
             }, "35c5369e-78f3-47e2-b174-7c13a8b34c29": {
                 "source": {"id": "techcrunch", "name": "TechCrunch"},
@@ -1293,6 +1294,7 @@
                 "urlToImage": "https://techcrunch.com/wp-content/uploads/2022/09/GettyImages-838665586.jpg?resize=1200,800",
                 "publishedAt": "2023-05-02T13:17:09Z",
                 "type":'hot',
+                "category":"Jambol",
                 "content": "A month after internal, sensitive data from Samsung was accidentally leaked to ChatGPT, Samsung is cracking down on usage of the generative AI service. The electronics giant is planning a temporary b… [+2978 chars]"
             }, "354d7e54-9e94-4db6-81e6-263d6f7d6dcf": {
                 "source": {"id": "techcrunch", "name": "TechCrunch"},
@@ -1303,6 +1305,7 @@
                 "urlToImage": "https://techcrunch.com/wp-content/uploads/2023/05/IMG_4038.jpg?resize=1200,800",
                 "publishedAt": "2023-05-02T12:57:23Z",
                 "type":'hot',
+                "category":"Sliven",
                 "content": "When I visited Viams Manhattan offices late last year, I was struck by two things. First, theres a killer view of Lincoln Center. As the weather is getting warmer and theyre starting to do those all-… [+1801 chars]"
             }, "356ffce2-6b4e-4a9b-89f6-839ef3b53dc6": {
                 "source": {"id": "techcrunch", "name": "TechCrunch"},
@@ -1313,6 +1316,7 @@
                 "urlToImage": "https://techcrunch.com/wp-content/uploads/2023/05/Audience-Choice_header_breakouts-1.png?resize=1200,675",
                 "publishedAt": "2023-05-02T12:20:27Z",
                 "type":'normal',
+                "category":"Sliven",
                 "content": "In early 2022, you may remember, we called for experts to submit applications to present breakout sessions and roundtable discussions at TechCrunch Disrupt 2023, taking place on September 1921 in San… [+3858 chars]"
             }, "35b5c5a5-5a5c-4359-87a7-266d28285f7a": {
                 "source": {"id": "techcrunch", "name": "TechCrunch"},
@@ -1323,6 +1327,7 @@
                 "urlToImage": "https://techcrunch.com/wp-content/uploads/2023/05/Visualizer-1.png?resize=1200,675",
                 "publishedAt": "2023-05-02T04:42:53Z",
                 "type":'normal',
+                "category":"Jambol",
                 "content": "Startups working on driverless cars fully may no longer attract the kind of nine-figure acquisition or funding offers that were prevalent just a few years ago. But there are still pockets within the … [+4204 chars]"
             }, "359af7d3-361c-4477-9f2e-b77d64a68e2b": {
                 "source": {"id": "techcrunch", "name": "TechCrunch"},
@@ -1333,6 +1338,7 @@
                 "urlToImage": "https://techcrunch.com/wp-content/uploads/2023/05/Kodiak_EV_3.jpg?resize=1200,800",
                 "publishedAt": "2023-05-02T04:31:53Z",
                 "type":'normal',
+                "category":"Jambol",
                 "content": "Self-driving trucking company Kodiak Robotics plans to introduce an electric autonomous Class 8 truck to its fleet in 2024. The news comes as California, one of the states Kodiak hopes to do business… [+3081 chars]"
             }, "358ea8f5-99bb-46d6-9dbf-9e944cd686bc": {
                 "source": {"id": "techcrunch", "name": "TechCrunch"},
@@ -1343,6 +1349,7 @@
                 "urlToImage": "https://techcrunch.com/wp-content/uploads/2015/11/new_relic_disrupt_afterparty.jpg?resize=1200,645",
                 "publishedAt": "2023-05-02T03:22:08Z",
                 "type":'normal',
+                "category":"Jambol",
                 "content": "We’re currently deep in the cycle of every enterprise-adjacent company integrating a large language model into its services. Today, New Relic is throwing its hat in the ring with Grok, which it calls… [+2783 chars]"
             }, "35772f7e-8f85-4287-957d-09e0da57a9e5": {
                 "source": {"id": "techcrunch", "name": "TechCrunch"},
@@ -1353,6 +1360,7 @@
                 "urlToImage": "https://techcrunch.com/wp-content/uploads/2023/05/MouthPad_Pics_01-Large.jpeg?resize=1200,635",
                 "publishedAt": "2023-05-01T23:31:00Z",
                 "type":'normal',
+                "category":"Straldja",
                 "content": "Worldwide, about one in six people live with a disability. Whether through injury or illness, disability can manifest itself as an impediment to mobility. There have been fantastic advancements in co… [+4655 chars]"
             }, "35e15b19-7c1d-48d7-a3a3-3a7107af8548": {
                 "source": {"id": "techcrunch", "name": "TechCrunch"},
@@ -1363,6 +1371,7 @@
                 "urlToImage": "https://techcrunch.com/wp-content/uploads/2023/05/Pietra-Member-Apps.png?resize=1200,672",
                 "publishedAt": "2023-05-04T21:18:48Z",
                 "type":'normal',
+                "category":"Straldja",
                 "content": "The direct-to-consumer business world continues to be noisy. Its not enough to just start up a business and advertise on Google and Facebook: Todays e-commerce merchants have to be masters of all cha… [+3570 chars]"
             }, "35d6efc3-e898-4f8a-bd5c-79c0775bfcab": {
                 "source": {"id": "techcrunch", "name": "TechCrunch"},
@@ -1373,6 +1382,7 @@
                 "urlToImage": "https://techcrunch.com/wp-content/uploads/2022/05/GettyImages-1299128132.jpg?resize=1200,800",
                 "publishedAt": "2023-05-05T14:45:05Z",
                 "type":'normal',
+                "category":"Straldja",
                 "content": "Batteries are hard, an expert once said.\r\nHe wasnt kidding. Designing and manufacturing pouches, slabs or cylinders filled with volatile chemicals that are capable of recharging ever more quickly is … [+2518 chars]"
             }
         },
