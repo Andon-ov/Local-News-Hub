@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { TiWeatherCloudy, TiWeatherPartlySunny, TiWeatherDownpour } from 'react-icons/ti';
+import "./Weather.css";
+import React, { useState } from 'react';
+// import { TiWeatherCloudy, TiWeatherPartlySunny, TiWeatherDownpour } from 'react-icons/ti';
+import { Card, Badge } from 'react-bootstrap';
+import { WiDayCloudy } from 'react-icons/wi';
 
 const Weather = () => {
-//   const [weatherData, setWeatherData] = useState(null);
+  //   const [weatherData, setWeatherData] = useState(null);
   const [weatherData, setWeatherData] = useState({
     "location": {
       "name": "London",
@@ -55,41 +58,49 @@ const Weather = () => {
     }
   });
   const apiKey = 'YOUR_API_KEY'; // Replace with your API key
-//   https://www.weatherapi.com/
+  //   https://www.weatherapi.com/
 
-//   useEffect(() => {
-//     // Fetch weather data from the API
-//     const fetchWeatherData = async () => {
-//       try {
-//         const response = await fetch(`https://api.example.com/weather?apiKey=${apiKey}`);
-//         setWeatherData(response.data);
-//       } catch (error) {
-//         console.error('Error fetching weather data:', error);
-//       }
-//     };
+  //   useEffect(() => {
+  //     // Fetch weather data from the API
+  //     const fetchWeatherData = async () => {
+  //       try {
+  //         const response = await fetch(`https://api.example.com/weather?apiKey=${apiKey}`);
+  //         setWeatherData(response.data);
+  //       } catch (error) {
+  //         console.error('Error fetching weather data:', error);
+  //       }
+  //     };
 
-//     fetchWeatherData();
-//   }, [apiKey]);
+  //     fetchWeatherData();
+  //   }, [apiKey]);
 
-//   if (!weatherData) {
-//     return <div>Loading...</div>;
-//   }
+  //   if (!weatherData) {
+  //     return <div>Loading...</div>;
+  //   }
 
   // Render weather information
   return (
-    <div>
-      <h2>Weather</h2>
-      <p>City: {weatherData.location['name']}</p>
-      <p>Temperature: {weatherData.current['temp_c']}°C</p>
-      <p>Condition: {weatherData.current.condition['text']}</p>
-      <p>Humidity: {weatherData.current['humidity']}%</p>
-
-      {/* Render weather icon based on condition */}
-      {weatherData.condition === 'Cloudy' && <TiWeatherCloudy />}
-      {weatherData.condition === 'Partly Sunny' && <TiWeatherPartlySunny />}
-      {weatherData.condition === 'Rain' && <TiWeatherDownpour />}
-    </div>
+    <Card>
+      <Card.Header>
+        <h4>{weatherData.location.name}</h4>
+        <p>{weatherData.location.localtime}</p>
+      </Card.Header>
+      <Card.Body>
+        <Card.Text>
+          <Badge variant="info">{weatherData.current.condition.text}</Badge>
+        </Card.Text>
+        <Card.Text>
+          <WiDayCloudy size={64} />
+        </Card.Text>
+        <Card.Text>
+          Temperature: {weatherData.current.temp_c}°C / {weatherData.current.temp_f}°F
+        </Card.Text>
+        <Card.Text>Humidity: {weatherData.current.humidity}%</Card.Text>
+        <Card.Text>Wind: {weatherData.current.wind_mph} mph</Card.Text>
+      </Card.Body>
+    </Card>
   );
 };
+
 
 export default Weather;

@@ -1,7 +1,8 @@
-import Card from './Card';
+import Card from './VerticalCard';
 
 import {useContext} from 'react';
-import {NewsContext} from '../../contexts/NewsContext';
+import {NewsContext} from '../../../contexts/NewsContext';
+
 
 function Cards() {
     const {news} = useContext(NewsContext);

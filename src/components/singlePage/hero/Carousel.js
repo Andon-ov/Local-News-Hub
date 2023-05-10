@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 import {Carousel} from 'react-bootstrap';
-import {NewsContext} from '../../contexts/NewsContext';
+import {NewsContext} from '../../../contexts/NewsContext';
+import './Carousel.css';
 
 const HeroCarousel = () => {
 
@@ -15,6 +16,7 @@ const HeroCarousel = () => {
                     <Carousel.Item key={index}>
 
                         <img src={slide.urlToImage} className='carouselImg' alt={slide.title}/>
+                        <div className='gradient'></div>
                         <Carousel.Caption>
                             <h3>{slide.title}</h3>
 

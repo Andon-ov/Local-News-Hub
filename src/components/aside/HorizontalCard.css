@@ -1,0 +1,14 @@
+.horizontalCard{
+    /* height: 150px; */
+    border-radius: 0;
+    border: 1px solid var(--mainColor);
+}
+.horizontalCard__badge{
+    background-color: var(--mainColor);
+    border-radius: 8px;
+    color: var( --mainBntTextColor);
+    padding: 1px 10px;
+    position: absolute;
+    right: 10px;
+    bottom: -10px;
+}

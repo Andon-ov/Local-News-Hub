@@ -1,0 +1,6 @@
+.logo__letter {
+    padding: 1px 10px;
+    background-color:var(--mainColor);
+    color: var( --mainBntTextColor);
+    margin: 5px;
+}

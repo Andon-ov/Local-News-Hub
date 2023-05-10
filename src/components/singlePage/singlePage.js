@@ -1,5 +1,5 @@
-import Cards from './Cards';
-import Hero from './Hero';
+import Cards from './main/Cards';
+import Hero from './hero/Hero';
 
 function SinglePage() {
     return (

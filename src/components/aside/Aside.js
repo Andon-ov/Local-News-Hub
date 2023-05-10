@@ -1,4 +1,4 @@
-import Tabs from './Tabs';
+import Tabs from './tabs/Tabs';
 import Weather from './Weather';
 
 const Aside = () => {
