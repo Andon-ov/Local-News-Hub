@@ -1,0 +1,60 @@
+.topHeader {
+    padding: 0 10%;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--mainShadow);
+}
+
+ul {
+    margin-bottom: 0;
+}
+
+.weather {
+    gap: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.topHeader__humidity,
+.topHeader__wind,
+.topHeader__conditionAndTemp {
+    display: flex;
+    align-items: center;
+}
+
+.topHeader__location {
+    font-size: 22px;
+}
+
+.social {
+    display: flex;
+    gap: 20px
+}
+
+.whether__icon {
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.facebook {
+    background-color: #1B7BFD;
+    color: white;
+}
+
+.instagram {
+    background-color: #C23785;
+    color: white;
+}
+
+.youtube {
+    background-color: #EF5043;
+    color: white;
+}
+
+.twitter {
+    background-color: #42C0F5;
+    color: white;
+}

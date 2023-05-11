@@ -19,6 +19,7 @@ import Details from './components/Details';
 import Aside from './components/aside/Aside';
 import NoMatch from "./components/NoMatch";
 import SearchPage from './components/Search';
+import TopHeader from './components/header/topHeader/TopHeader';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
                     <BrowserRouter>
                         <>
                             <header className="header">
+                                <TopHeader/>
                                 <LogoAndAd />
                                 <Nav />
                             </header>
