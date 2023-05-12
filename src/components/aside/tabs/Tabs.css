@@ -1,35 +1,39 @@
 .tabs__wrapper {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 10px;
-    box-shadow: var(--mainShadow);
-    margin-top:40px;
-
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .tabs {
-    
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
 .tabs__btn {
-    text-transform: uppercase;
+    all: unset;
+    background-color: black;
+    color: white;
     font-weight: bold;
-    background-color: var(--mainColor);
     padding: 10px;
-    border: none;
-    color: var( --mainBntTextColor);
+    box-shadow: var(--mainShadow);
+    text-align: center;
 }
-.tabs__btn:focus{
-    color: var(--mainColor);
+
+.tabs__btn:focus {
+    color: black;
     border: 1px solid var(--mainColor);
-    background-color: var(--focusBntColor);
+    background-color: var(--mainColor);
 }
 
 .tabs__btn:hover {
-
     box-shadow: var(--mainShadow);
-    color: var(--hoverTextColor);
+    color: var(--mainColor);
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+.logo__ad {
+    padding: 6px 430px;
+    text-transform: uppercase;
+    border: 1px solid var(--mainColor);
 }

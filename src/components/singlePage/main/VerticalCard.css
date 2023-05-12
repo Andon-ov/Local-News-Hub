@@ -2,11 +2,15 @@ a {
     text-decoration: none;
 }
 
-.horizontalCard {
+.verticalCard {
     border: none;
 }
 
-.horizontalCard .card-title {
+.verticalCard .verticalCardImg {
+    border-radius: 0;
+}
+
+.verticalCard .card-title {
     color: var(--mainTextColor);
     overflow: hidden;
     text-overflow: ellipsis;
@@ -15,18 +19,18 @@ a {
     -webkit-box-orient: vertical;
 }
 
-.horizontalCard .card-title:hover {
+.verticalCard .card-title:hover {
     color: red;
 }
 
-.horizontalCard .card-body {
+.verticalCard .card-body {
     padding: 0;
 }
 
-.horizontalCard .card-text p {
+.verticalCard .card-text p {
     margin: 0;
 }
 
-.horizontalCard .horizontalCard__date {
+.verticalCard .horizontalCard__date {
     color: grey;
 }

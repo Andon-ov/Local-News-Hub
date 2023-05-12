@@ -1,5 +1,6 @@
 import Cards from './main/Cards';
 import Hero from './hero/Hero';
+import './SinglePage.css'
 
 function SinglePage() {
     return (

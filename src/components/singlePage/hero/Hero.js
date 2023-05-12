@@ -1,13 +1,12 @@
 import HeroCarousel from './Carousel';
+import './Hero';
 
 function Hero() {
-
-    return (
-        <section className="hero">
-            <h2 className="heroTitle">Hot Topics</h2>
-            <HeroCarousel/>
-        </section>
-    );
+  return (
+    <section className="hero">
+      <HeroCarousel />
+    </section>
+  );
 }
 
 export default Hero;

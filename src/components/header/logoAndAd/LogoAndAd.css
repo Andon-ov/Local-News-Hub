@@ -4,3 +4,10 @@
     color: var( --mainBntTextColor);
     margin: 5px;
 }
+.logo {
+    width: 100%;
+    padding: 2% 10% 1% 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}

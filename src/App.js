@@ -12,7 +12,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Nav from './components/header/nav/Nav';
 import LogoAndAd from './components/header/logoAndAd/LogoAndAd';
 import Login from './components/Login';
-import SinglePage from './components/singlePage/singlePage';
+import SinglePage from './components/singlePage/SinglePage';
 import Register from './components/Register';
 import Logout from './components/Logout';
 import Details from './components/Details';
