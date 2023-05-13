@@ -15,7 +15,7 @@ import Login from './components/Login';
 import SinglePage from './components/singlePage/SinglePage';
 import Register from './components/Register';
 import Logout from './components/Logout';
-import Details from './components/Details';
+import Details from './components/details/Details';
 import Aside from './components/aside/Aside';
 import NoMatch from './components/NoMatch';
 import SearchPage from './components/Search';

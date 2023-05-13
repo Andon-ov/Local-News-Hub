@@ -1,0 +1,17 @@
+.details__title {
+    padding: 0 100px 20px 100px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.details__description {
+    padding: 0 150px 20px 150px;
+    text-align: center;
+}
+
+.details__publish {
+    /* padding: 0 30px; */
+    display: flex;
+    justify-content: space-between;
+    color: grey;
+}
