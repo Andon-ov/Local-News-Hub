@@ -1,6 +1,12 @@
-.carousel.carousel.slide.carousel-fade {
-    /* width: 60vw;
-    height: 52vh; */
+.carousel__badge {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    background-color: var(--mainColor);
+    color: white;
+    font-weight: 600;
 }
 
 .gradient {
@@ -9,6 +15,13 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,0) 70%, black 100%); 
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 70%, black 100%);
+}
+
+.carousel__title {
+    color: white;
+}
+
+.carousel__title:hover {
+    color: var(--mainColor);
 }

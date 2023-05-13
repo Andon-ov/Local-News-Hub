@@ -1,12 +1,12 @@
-.tabs__wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-
 .tabs {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.tabs__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .tabs__btn {
@@ -27,7 +27,8 @@
 
 .tabs__btn:hover {
     box-shadow: var(--mainShadow);
-    color: var(--mainColor);
+    background-color: var(--mainColor);
+    color: white;
     border-left: 1px solid white;
     border-right: 1px solid white;
 }

@@ -1,9 +1,10 @@
 .logo__letter {
     padding: 1px 10px;
-    background-color:var(--mainColor);
-    color: var( --mainBntTextColor);
+    background-color: var(--mainColor);
+    color: var(--mainBntTextColor);
     margin: 5px;
 }
+
 .logo {
     width: 100%;
     padding: 2% 10% 1% 10%;

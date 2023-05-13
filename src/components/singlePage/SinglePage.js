@@ -1,15 +1,16 @@
 import Cards from './main/Cards';
 import Hero from './hero/Hero';
-import './SinglePage.css'
+import './SinglePage.css';
 
 function SinglePage() {
     return (
         <main className="main">
-            <Hero />
-            <div>
-                <h2 className="sectionTitle">Latest News</h2>
+            <Hero/>
+            <div className="sectionTitle">
+                <h2>Latest News</h2>
+                {/* <hr className='divider'/> */}
             </div>
-            <Cards />
+            <Cards/>
         </main>
     );
 }

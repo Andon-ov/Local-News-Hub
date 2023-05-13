@@ -11,7 +11,7 @@ const Navigation = () => {
   return (
     <nav className="nav">
       <section className="navBar">
-        <Nav.Link as={Link} to="/">
+        <Nav.Link className='home' as={Link} to="/">
           Home
         </Nav.Link>
         <Nav.Link as={Link} to="/login">
@@ -28,7 +28,8 @@ const Navigation = () => {
         </Nav.Link>
       </section>
       {user.email !== '' ? (
-        <Nav.Link className="nav__user">Welcome {user.email}!</Nav.Link>
+        <p className="nav__user" >Welcome {user.email}!</p>
+        // <Nav.Link className="nav__user">Welcome {user.email}!</Nav.Link>
       ) : (
         ''
       )}

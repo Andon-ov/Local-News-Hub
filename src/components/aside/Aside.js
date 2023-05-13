@@ -1,7 +1,7 @@
 import Tabs from './tabs/Tabs';
+import './Aside.css';
 
 const Aside = () => {
-
     return (
         <aside className="aside">
             <Tabs/>
@@ -9,5 +9,3 @@ const Aside = () => {
     );
 };
 export default Aside;
-
-

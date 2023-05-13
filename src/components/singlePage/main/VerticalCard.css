@@ -1,13 +1,29 @@
-a {
-    text-decoration: none;
-}
-
 .verticalCard {
     border: none;
 }
 
-.verticalCard .verticalCardImg {
-    border-radius: 0;
+.verticalCardImg__wrapper {
+    width: 320px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.verticalCardImg {
+    transition: transform .3s;
+    /* Animation */
+    height: 100%;
+    width: 100%;
+    border-radius: unset;
+    object-fit: cover;
+}
+
+.verticalCardImg:hover {
+    transform: scale(1.1);
+}
+
+
+.verticalCard .card-body {
+    padding: 0;
 }
 
 .verticalCard .card-title {
@@ -23,14 +39,11 @@ a {
     color: red;
 }
 
-.verticalCard .card-body {
-    padding: 0;
-}
-
-.verticalCard .card-text p {
-    margin: 0;
-}
-
-.verticalCard .horizontalCard__date {
+.verticalCard .verticalCard__date {
     color: grey;
+    margin: 10px 0;
+}
+
+a {
+    text-decoration: none;
 }

@@ -1,0 +1,18 @@
+.main {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    place-self: center;
+}
+
+.sectionTitle {
+    width: 100%;
+}
+
+.sectionTitle h2 {
+    color: white;
+    background-color: black;
+    font-size: 24px;
+    padding: 20px 30px;
+    margin: 25px 0 25px 0;
+}

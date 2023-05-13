@@ -1,0 +1,29 @@
+.footer {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+
+    width: 100%;
+    text-align: center;
+    padding: 1% 10%;
+    background-color: #212529;
+    color: white;
+    align-items: center;
+}
+
+.footer__links {
+    display: flex;
+    gap: 30px;
+    margin-left: auto;
+}
+
+.footer__link:hover {
+    color: var(--mainColor);
+}
+
+.footer__link:focus{
+    color: red;
+}
+p{
+    margin: 0;
+}
