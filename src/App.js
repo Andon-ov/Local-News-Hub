@@ -11,14 +11,14 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Nav from './components/header/nav/Nav';
 import LogoAndAd from './components/header/logoAndAd/LogoAndAd';
-import Login from './components/Login';
+import Login from './components/login/Login';
 import SinglePage from './components/singlePage/SinglePage';
-import Register from './components/Register';
+import Register from './components/register/Register';
 import Logout from './components/Logout';
 import Details from './components/details/Details';
 import Aside from './components/aside/Aside';
 import NoMatch from './components/NoMatch';
-import SearchPage from './components/Search';
+import SearchPage from './components/search/Search';
 import TopHeader from './components/header/topHeader/TopHeader';
 import Footer from './components/footer/Footer';
 import Contact from './components/footer/contact/Contact';

@@ -3,7 +3,8 @@
  @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
  :root {
-     --mainColor: #D8BFD8;
+     --mainColor: rgb(227, 24, 24);
+     --mainShadowColor: 255, 24, 24;
      --mainTextColor: black;
 
      --mainBntTextColor: white;
@@ -15,8 +16,8 @@
 
  body {
      /* font-family: 'Montserrat', sans-serif; */
-     font-family: 'Merriweather', serif;
      /*font-family: 'Lora', serif;*/
+     font-family: 'Merriweather', serif;
  }
 
  h5 {

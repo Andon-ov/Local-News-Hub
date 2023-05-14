@@ -1,44 +1,36 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import {useNavigate} from 'react-router-dom';
-import * as authService from '../services/authService';
+// to use context we need to import 'useContext' and 'AuthContext'
 import {useContext} from 'react';
-import {AuthContext} from '../contexts/AuthContext';
+import {AuthContext} from '../../contexts/AuthContext';
 
-const Login = () => {
+// import Navigate from react-router-dom 6 to navigate wherever we want
+import {useNavigate} from 'react-router-dom';
+
+// import authService to use func from them
+import * as authService from '../../services/authService';
+import './Register.css';
+
+function Register() {
     const {login} = useContext(AuthContext);
     const navigate = useNavigate();
 
-    async function onSubmit(e) {
+    const registerSubmitHandler = (e) => {
         e.preventDefault();
-        const formData = new FormData(e.currentTarget);
 
-        const email = formData.get('email');
-        const password = formData.get('password');
-
-        authService
-            .login({
-                email, password,
-            })
-            .then((user) => {
+        let {email, password} = Object.fromEntries(new FormData(e.currentTarget));
+        console.log(email, password);
+        authService.register(email, password).then((authData) => {
+            login(authData);
+            navigate('/');
+        });
+    };
 
 
-                // give user data to func from context 'login'
-                login(user);
-
-                // navigate to dashboard after login
-                navigate('/');
-            })
-            .catch((error) => alert(error.message));
-
-
-    }
-
-    return (<div style={{
-            display: 'flex', justifyContent: 'center', alignItems: 'center', height: '75vh'
-        }}>
-            <Form onSubmit={onSubmit}>
-                <h1>Login</h1>
+    return (
+        <div className='register'>
+            <Form onSubmit={registerSubmitHandler} className='register__form'>
+                <h1 className='register__title' >Register</h1>
                 <br/>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
@@ -53,12 +45,13 @@ const Login = () => {
                     <Form.Control type="password" placeholder="Password" name='password'/>
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out"/>
+                    <Form.Check type="checkbox" label="Remember me"/>
                 </Form.Group>
                 <Button variant="primary" type="submit">
                     Login
                 </Button>
             </Form>
-        </div>);
+        </div>
+    );
 };
-export default Login;
+export default Register;

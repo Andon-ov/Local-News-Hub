@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Form, FormControl, Button } from 'react-bootstrap';
-import Card from '../components/singlePage/main/VerticalCard';
+import Card from '../singlePage/main/VerticalCard';
 
 import { useContext } from 'react';
-import { NewsContext } from '../contexts/NewsContext';
+import { NewsContext } from '../../contexts/NewsContext';
 
 const SearchPage = () => {
     const [searchTerm, setSearchTerm] = useState('');

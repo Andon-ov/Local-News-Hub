@@ -1,0 +1,17 @@
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65vh;
+}
+
+.register__form {
+    border: 1px solid var(--mainColor);
+    padding: 100px 120px;
+
+}
+
+.register__title {
+    text-transform: uppercase;
+    text-align: center;
+}

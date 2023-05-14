@@ -24,16 +24,23 @@ function Details() {
 
     return (<div className='details'>
 
-        <h1 className='details__title'>{news.title}</h1>
-        <p className='details__description' >{news.description}</p>
-        <div className='details__publish'>
-        <p>Published by: {news.author}</p>
-        <p>Published on: {formatDate(news.publishedAt)}</p>
+
+        <div className='details__info'>
+            <p className='details__author'>Author: {news.author}</p>
+            <p className='details__date'>{formatDate(news.publishedAt)}</p>
+            <p className='details__category'>Municipality:{news.category}</p>
+            <p className='details__views'>Views: 8972</p>
+            <p className='details__comments'>Comments (4)</p>
         </div>
-       
-        <Image src={news.urlToImage} alt={news.title} fluid />
+        <div className='details__img'>
+            <h1 className='details__title'>{news.title}</h1>
+            <Image src={news.urlToImage} alt={news.title} fluid />
+
+        </div>
+        <p className='details__description' >{news.description}</p>
         <p>{news.content}</p>
         <a href={news.url} rel="noreferrer" target="_blank">Read more</a>
+
 
     </div>);
 }
