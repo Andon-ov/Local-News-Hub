@@ -1,0 +1,33 @@
+.search {
+ 
+}
+.search__title{
+    text-align: center;
+}
+.search__input{
+    margin-bottom: 40px;
+}
+.search__result{
+    width: 100%;
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(3, 1fr);
+}
+.search__form{
+    /* border: 1px solid var(--mainColor); */
+    padding: 40px 120px;
+}
+
+.search__for{
+    padding-left: 50px;
+
+    text-align: center;
+    width: 100%;
+}
+
+.search__notFound{
+    padding-left: 50px;
+    text-align: center;
+    width: 100%;
+    color: var(--mainColor);
+}

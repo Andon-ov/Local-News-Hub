@@ -6,7 +6,7 @@
 }
 
 .login__form {
-    border: 1px solid var(--mainColor);
+    /* border: 1px solid var(--mainColor); */
     padding: 100px 120px;
     
 
@@ -20,7 +20,7 @@
 .form-control {
     border: none;
     border-radius: unset;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--mainBlack);
 }
 
 .form-control:focus {
@@ -43,7 +43,7 @@
 
 .btn {
     border-radius: unset;
-    background-color: black;
+    background-color:var(--mainBlack);
     border: 1px solid transparent;
     width: 100%;
 }

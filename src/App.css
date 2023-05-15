@@ -1,10 +1,11 @@
  /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
- /*@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');*/
- @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
-
+ /* @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap'); */
+ /* @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap'); */
+ @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
  :root {
      --mainColor: rgb(227, 24, 24);
      --mainShadowColor: 255, 24, 24;
+     --mainBlack: rgb(57, 57, 57);
      --mainTextColor: black;
 
      --mainBntTextColor: white;
@@ -16,19 +17,27 @@
 
  body {
      /* font-family: 'Montserrat', sans-serif; */
-     /*font-family: 'Lora', serif;*/
-     font-family: 'Merriweather', serif;
+     /* font-family: 'Merriweather', serif; */
+     /* font-family: 'Lora', serif; */
+     font-family: 'Oswald', sans-serif;
+     /* display: grid; */
+
  }
 
  h5 {
      font-size: 1.125rem;
  }
 
+ .content__wrapper {
+     width: 1440px;
+     margin: auto;
+
+ }
 
  .wrapper {
-     width: 80%;
-     margin: 1% 10%;
+
+     width: 1440px;
      display: grid;
      gap: 2%;
-     grid-template-columns: 70% 28%;
+     grid-template-columns: 60% 38%;
  }

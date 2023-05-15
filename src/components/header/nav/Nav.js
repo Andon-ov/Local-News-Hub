@@ -1,7 +1,7 @@
 import './Nav.css';
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { Nav, Navbar } from 'react-bootstrap';
+import { Nav } from 'react-bootstrap';
 
 import { AuthContext } from '../../../contexts/AuthContext';
 
@@ -14,7 +14,7 @@ const Navigation = () => {
         <Nav.Link className='home' as={Link} to="/">
           Home
         </Nav.Link>
-        <Nav.Link as={Link} to="/login">
+        <Nav.Link as={Link} cla to="/login">
           Login
         </Nav.Link>
         <Nav.Link as={Link} to="/register">
@@ -29,7 +29,6 @@ const Navigation = () => {
       </section>
       {user.email !== '' ? (
         <p className="nav__user" >Welcome {user.email}!</p>
-        // <Nav.Link className="nav__user">Welcome {user.email}!</Nav.Link>
       ) : (
         ''
       )}

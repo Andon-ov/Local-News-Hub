@@ -11,8 +11,8 @@
 
 .sectionTitle h2 {
     color: white;
-    background-color: black;
+    background-color:var(--mainBlack);
     font-size: 24px;
-    padding: 20px 30px;
+    padding: 15px 30px;
     margin: 25px 0 25px 0;
 }

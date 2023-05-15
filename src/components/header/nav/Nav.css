@@ -3,10 +3,10 @@
     justify-content: space-between;
     align-items: baseline;
 
-    background-color: black;
+    background-color:var(--mainBlack);
     color: white;
     padding: 0 30px 0 0;
-    margin: 13px 10% 13px 10%;
+    margin: 0px 0 25px 0;
 }
 
 .navBar {
@@ -18,11 +18,11 @@
 }
 
 .nav-link {
-    background-color: black;
+    background-color: var(--mainBlack);
     color: white;
     font-size: 20px;
     font-weight: 500;
-    padding: 20px 20px;
+    padding: 15px 20px;
 }
 
 .nav-link:hover {

@@ -1,10 +1,9 @@
 .horizontalCard {
     display: grid;
     grid-template-columns: 2fr 3fr;
-    gap: 20px;
-    color: black;
+    color: var(--mainBlack);
     text-decoration: none;
-
+    gap: 20px;
     border-radius: unset;
     border: none;
     transition: transform .3s;
@@ -15,14 +14,14 @@
 }
 
 .horizontalCardImg__wrapper {
-    width: 180px;
-    height: 100px;
+    width: 100%;
+    /* height: 100px; */
     overflow: hidden;
 }
 
 .horizontalCardImg {
     width: 100%;
-    height: 100px;
+    /* height: 100px; */
 }
 
 .horizontalCardImg:hover {
@@ -31,7 +30,7 @@
 
 
 .horizontalCard .card-body {
-    padding: 0;
+    padding: 10px 0 5px 0;
 }
 
 .horizontalCard .card-title {

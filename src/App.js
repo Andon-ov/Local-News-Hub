@@ -32,9 +32,9 @@ function App() {
       <AuthProvider>
         <NewsProvider>
           <BrowserRouter>
-            <>
+            <TopHeader />
+            <div className='content__wrapper'>
               <header className="header">
-                <TopHeader />
                 <LogoAndAd />
                 <Nav />
               </header>
@@ -57,9 +57,8 @@ function App() {
                 </Routes>
                 <Aside />
               </section>
-
-              <Footer />
-            </>
+            </div>
+            <Footer />
           </BrowserRouter>
         </NewsProvider>
       </AuthProvider>
