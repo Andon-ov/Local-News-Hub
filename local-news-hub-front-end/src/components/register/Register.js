@@ -19,11 +19,12 @@ function Register() {
         e.preventDefault();
 
         let {email, password} = Object.fromEntries(new FormData(e.currentTarget));
-        console.log(email, password);
+
         authService.register(email, password).then((authData) => {
             login(authData);
             navigate('/');
-        });
+        })
+        .catch((error) => alert(error.message));
     };
 
 

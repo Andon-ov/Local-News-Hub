@@ -13,8 +13,10 @@ function Logout() {
 
     useEffect(() => {
         authService
+
             .logout(user.accessToken)
             .then(() => {
+                console.log(user.accessToken);
                 logout();
                 navigate('/');
             })

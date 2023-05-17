@@ -14,18 +14,19 @@ const Login = () => {
         e.preventDefault();
         const formData = new FormData(e.currentTarget);
 
-        const email = formData.get('email');
+        const username = formData.get('email');
         const password = formData.get('password');
 
         authService
             .login({
-                email, password,
+                username, password,
             })
             .then((user) => {
 
 
                 // give user data to func from context 'login'
                 login(user);
+                console.log(user);
 
                 // navigate to dashboard after login
                 navigate('/');
