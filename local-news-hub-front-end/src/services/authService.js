@@ -23,13 +23,18 @@ export const login = async (user) => {
 
 // logout
 export const logout = async(token) => {
-    // return fetch(`${baseUrl}/users/logout`, {
-        let res = await fetch(`${baseUrl}/logout/`, {
-        method: 'GET', headers: {
-            'Content-Type': 'application/json', 'X-Authorization': token,
-        },});
-        let data = await res.json();
-        return data;
+    // if (token){
+
+        // return fetch(`${baseUrl}/users/logout`, {
+            let res = await fetch(`${baseUrl}/logout/`, {
+            method: 'GET', headers: {
+                // 'Content-Type': 'application/json', 'X-Authorization': token,
+                'Content-Type': 'application/json',
+                'Authorization': `Token ${token}`
+            },});
+            return res;
+    // }
+
 };
 
 export const register = async (username, password) => {

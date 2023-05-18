@@ -37,6 +37,5 @@ class CreateUserSerializer(serializers.ModelSerializer):
     # if we want to return noting we use 'return {}'
     def to_representation(self, instance):
         user_representation = super().to_representation(instance)
-        print(instance)
         user_representation.pop('password')
         return user_representation

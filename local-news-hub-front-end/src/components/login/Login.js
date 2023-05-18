@@ -26,7 +26,6 @@ const Login = () => {
 
                 // give user data to func from context 'login'
                 login(user);
-                console.log(user);
 
                 // navigate to dashboard after login
                 navigate('/');

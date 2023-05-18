@@ -27,7 +27,7 @@ const Navigation = () => {
           Logout
         </Nav.Link>
       </section>
-      {user.username !== '' ? (
+      {user.email !== '' ? (
         <p className="nav__user" >Welcome {user.username}!</p>
       ) : (
         ''

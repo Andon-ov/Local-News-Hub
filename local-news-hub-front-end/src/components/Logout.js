@@ -10,18 +10,19 @@ function Logout() {
     const navigate = useNavigate();
     const {user, logout} = useContext(AuthContext);
     // call func logout
-
     useEffect(() => {
         authService
-
-            .logout(user.accessToken)
-            .then(() => {
-                console.log(user.accessToken);
-                logout();
-                navigate('/');
+            .logout(user.token)
+            .then((res) => {
+                if (res.ok){
+                    logout();
+                    navigate('/');
+                }else{
+                    navigate(-1);
+                }
             })
             .catch((error) => console.log(error));
-    }, []);
+    }, [logout, navigate, user.token]);
 
     return null;
 }
