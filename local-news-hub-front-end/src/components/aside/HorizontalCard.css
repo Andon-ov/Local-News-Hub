@@ -44,7 +44,7 @@
 }
 
 .horizontalCard .card-title:hover {
-    color: red;
+    color: var(--mainColor)
 }
 
 .horizontalCard .card-text p {

@@ -6,8 +6,8 @@ function Straldja() {
     const {news} = useContext(NewsContext);
     return (news
             // .filter((x) => x.type === 'normal')
-            .filter((x) => x.category === 'Straldja')
-            .map((x) => <HorizontalCard key={x._id} news={x}/>));
+            .filter((x) => x.category_name === 'Straldja')
+            .map((x) => <HorizontalCard key={x.id} news={x}/>));
 }
 
 export default Straldja;

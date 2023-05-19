@@ -23,7 +23,6 @@ const SearchPage = () => {
         setSearchTerm(event.target.value);
     };
 
-    console.log(result);
     return (
         <div className='search'>
             <h1 className='search__title'>Search</h1>

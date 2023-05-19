@@ -51,7 +51,9 @@ db.sqlite3-journal
 # Virtual environment
 venv/
 
+# my
 .idea
+/migrations/
 
 # IDE
 .vscode/

@@ -27,10 +27,6 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 CORS_ALLOWED_ORIGINS = [
-    # "https://example.com",
-    # "https://sub.example.com",
-    # "http://localhost:8080",
-    # "http://127.0.0.1:9000",
     "http://localhost:3000",
 ]
 
@@ -127,7 +123,7 @@ else:
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = 'Europe/Sofia'
 
 USE_I18N = True
 

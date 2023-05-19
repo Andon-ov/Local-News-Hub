@@ -8,7 +8,7 @@ function Cards() {
     const {news} = useContext(NewsContext);
 
     return (<section className="cards">
-            {news.map((item) => (<Card key={item._id} news={item}/>))}
+            {news.map((item) => (<Card key={item.id} news={item}/>))}
         </section>);
 }
 

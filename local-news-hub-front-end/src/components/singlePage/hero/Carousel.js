@@ -5,26 +5,24 @@ import {Link} from 'react-router-dom';
 import './Carousel.css';
 
 const HeroCarousel = () => {
-    const {news} = useContext(NewsContext);
+    const { news } = useContext(NewsContext);
     return (
         <Carousel className="carousel" wrap fade>
             {news
-                .filter((x) => x.type === 'hot')
+                .filter((x) => x.news_type === 'hot')
                 .map((slide, index) => (
                     <Carousel.Item key={index}>
-                        <Link to={`/news/${slide._id}`}>
+                        <Link to={`/news/${slide.id}`}>
                             <img
-                                src={slide.urlToImage}
+                                src={slide.images[0]}
                                 className="carouselImg"
                                 alt={slide.title}
                             />
-                            <div className="carousel__badge">{slide.type} news</div>
-
-
+                            <div className="carousel__badge">{slide.news_type} news</div>
                             <div className="gradient"></div>
                         </Link>
                         <Carousel.Caption>
-                            <Link to={`/news/${slide._id}`}>
+                            <Link to={`/news/${slide.id}`}>
                                 <h3 className='carousel__title'>{slide.title}</h3>
                             </Link>
                         </Carousel.Caption>

@@ -25,3 +25,6 @@
 .carousel__title:hover {
     color: var(--mainColor);
 }
+.carousel-inner{
+    border: 50px solid rgba(var(--mainShadowColor),0.5);
+}
