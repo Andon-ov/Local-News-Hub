@@ -1,11 +1,12 @@
 import './Details.css';
 
-import { Image } from 'react-bootstrap';
+import { Carousel, Image } from 'react-bootstrap';
 import React, { useEffect, useState } from 'react';
 
 import { useParams } from 'react-router-dom';
 import * as newsService from '../../services/newsService';
 import { formatDate } from '../../services/dateService';
+import NewsCarousel from '../DetailsNewsCarousel/DetailsNewsCarousel';
 
 function Details() {
     // const { newsId } = useParams();
@@ -48,13 +49,12 @@ function Details() {
       }
 
 
-
+      let images = news.images;
 
     return (
     <div className='details'>
 
-
-      <Image src={news.images[0]} alt={news.title} fluid />
+      <NewsCarousel images={images} />
       <div className='details__info'>
         <p className='details__author'>Author: {news.author}</p>
         <p className='details__date'>{formatDate(news.published_at)}</p>
