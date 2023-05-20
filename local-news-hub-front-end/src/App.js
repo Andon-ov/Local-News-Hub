@@ -25,8 +25,10 @@ import Contact from './components/footer/contact/Contact';
 import Advertise from './components/footer/advertise/Advertise';
 import Terms from './components/footer/terms/Terms';
 import Subscriptions from './components/footer/subscriptions/Subscriptions';
-
+import CategoryNav from './components/header/CategoryNav';
+import CategoryDetails from './components/header/CategoryDetails';
 function App() {
+
   return (
     <CustomErrorBoundary>
       <AuthProvider>
@@ -37,9 +39,12 @@ function App() {
               <header className="header">
                 <LogoAndAd />
                 <Nav />
+                <CategoryNav/>
+      
               </header>
               <section className="wrapper">
                 <Routes>
+
                   <Route path="/" element={<SinglePage />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/search" element={<SearchPage />} />
@@ -50,10 +55,13 @@ function App() {
                   <Route path="/advertise" element={<Advertise />} />
                   <Route path="/terms" element={<Terms />} />
                   <Route path="/subscriptions" element={<Subscriptions />} />
+                  
+                  <Route path="/category/:categoryId" element={<CategoryDetails />} />
 
                   <Route path="/news/:newsId" element={<Details />} />
                   <Route exact path="/search/:query" component={SearchPage} />
                   <Route path="*" element={<NoMatch />} />
+
                 </Routes>
                 <Aside />
               </section>
@@ -62,7 +70,7 @@ function App() {
           </BrowserRouter>
         </NewsProvider>
       </AuthProvider>
-    </CustomErrorBoundary>
+    </CustomErrorBoundary> 
   );
 }
 

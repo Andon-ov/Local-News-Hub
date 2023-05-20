@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from local_news_hub_backend.news_api.models import News, Comment
+from local_news_hub_backend.news_api.models import News, Comment, Category
 
 
 class CommentSerializer(serializers.ModelSerializer):
@@ -13,6 +13,8 @@ class CommentSerializer(serializers.ModelSerializer):
 
 class NewsSerializer(serializers.ModelSerializer):
     category_name = serializers.CharField(source='category.title')
+    category_id = serializers.CharField(source='category.id')
+
     images = serializers.SerializerMethodField()
     videos = serializers.SerializerMethodField()
     tags = serializers.SerializerMethodField()
@@ -51,6 +53,7 @@ class NewsSerializer(serializers.ModelSerializer):
             'updated_at',
             'news_type',
             'category_name',
+            'category_id',
             'views_count',
             'images',
             'videos',
@@ -65,3 +68,9 @@ class NewsSerializer(serializers.ModelSerializer):
         comments = representation.pop('comments', [])
         representation['comments_count'] = len(comments)
         return representation
+
+
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = ('id', 'title')

@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from local_news_hub_backend.news_api.models import Category, Video, Tag, Comment, News, Image, Likes
+from local_news_hub_backend.news_api.models import Category, Video, Tag, Comment, News, Image, Like
 
 
 @admin.register(Category)
@@ -28,8 +28,8 @@ class CommentAdmin(admin.ModelAdmin):
     list_display = ('text', 'publication_date_and_time', 'news', 'user')
 
 
-@admin.register(Likes)
-class LikesAdmin(admin.ModelAdmin):
+@admin.register(Like)
+class LikeAdmin(admin.ModelAdmin):
     list_display = ('news', 'user',)
 
 
@@ -37,12 +37,12 @@ class LikesAdmin(admin.ModelAdmin):
 class NewsAdmin(admin.ModelAdmin):
     list_display = (
         'title',
-        'description',
-        'content',
+        # 'description',
+        # 'content',
         'published_at',
         'updated_at',
         # 'news_type',
-        # 'category',
+        'category',
         # 'photos',
         # 'videos',
         # 'tags',

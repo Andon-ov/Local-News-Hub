@@ -106,7 +106,11 @@ class Comment(models.Model):
         blank=True,
         null=False,
     )
-    news = models.ForeignKey('News', on_delete=models.CASCADE, related_name='news_comments')
+    news = models.ForeignKey(
+        'News',
+        on_delete=models.CASCADE,
+        related_name='news_comments'
+    )
 
     user = models.ForeignKey(
         UserModel,
@@ -122,11 +126,12 @@ class Comment(models.Model):
         ordering = ('-id',)
 
 
-class Likes(models.Model):
+class Like(models.Model):
     user = models.ForeignKey(
         UserModel,
         on_delete=models.CASCADE
     )
+
     news = models.ForeignKey(
         'News',
         on_delete=models.CASCADE,
@@ -134,38 +139,62 @@ class Likes(models.Model):
         blank=True,
         related_name='likes'
     )
-    created_at = models.DateTimeField(auto_now_add=True)
+
+    created_at = models.DateTimeField(
+        auto_now_add=True
+    )
 
     class Meta:
         ordering = ('-id',)
 
 
 class News(models.Model):
+    TITLE_MAX_LENGTH = 200
+    NEWS_TYPE_MAX_LENGTH = 10
     TYPE_CHOICES = (
         ('hot', 'Hot'),
         ('normal', 'Normal'),
     )
 
-    title = models.CharField(max_length=200)
+    title = models.CharField(
+        max_length=TITLE_MAX_LENGTH,
+    )
     description = models.TextField(
         blank=True,
         null=True
     )
     content = models.TextField()
+
     published_at = models.DateTimeField()
-    updated_at = models.DateTimeField(auto_now=True)
-    news_type = models.CharField(max_length=10, choices=TYPE_CHOICES, default='normal')
 
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    updated_at = models.DateTimeField(
+        auto_now=True
+    )
+    news_type = models.CharField(
+        max_length=NEWS_TYPE_MAX_LENGTH,
+        choices=TYPE_CHOICES,
+        default='normal'
+    )
 
-    views_count = models.PositiveIntegerField(default=0)
+    category = models.ForeignKey(
+        Category,
+        on_delete=models.CASCADE
+    )
+
+    views_count = models.PositiveIntegerField(
+        default=0
+    )
 
     tags = models.ManyToManyField(
         Tag,
         blank=True,
     )
-    comments = models.ManyToManyField(Comment, related_name='news_comments', blank=True,
-                                      )
+
+    comments = models.ManyToManyField(
+        Comment,
+        related_name='news_comments',
+        blank=True,
+    )
 
     def __str__(self):
         return self.title
