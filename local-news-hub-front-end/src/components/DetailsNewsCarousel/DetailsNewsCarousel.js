@@ -5,7 +5,10 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 const NewsCarousel = ({ images }) => {
   if (images.length <= 1) {
     // If there is only one image, render it directly without the carousel
-    return <img src={images[0]} alt="News" />;
+    return <img style={{width: '100%'}} src={images[0]} alt="News" />;
+    
+
+   
   }
 
   return (

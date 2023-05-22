@@ -67,7 +67,11 @@ function Details() {
 
       <div className='details__content'>
         <h1 className='details__title'>{news.title}</h1>
-        <p>{news.content}</p>
+
+        {/* <p>{news.content}</p> */}
+        <div dangerouslySetInnerHTML={{ __html: news.content }} />
+
+        {/* <p>{news.content}</p> */}
         <a href={news.url} rel='noreferrer' target='_blank'>
           Read more
         </a>

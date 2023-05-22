@@ -21,17 +21,17 @@ const CategoryNav = () => {
 
 
   return (
-    <div>
-      <ul>
+
+      <ul className='navBar'>
         {categories.map(category => (
           <li key={category.id}>
-            <Link to={`/category/${category.id}`}>{category.title}</Link>
+            <Link className='nav-link' to={`/category/${category.id}`}>{category.title}</Link>
           </li>
         ))}
 
       </ul>
 
-    </div>
+
   );
 };
 

@@ -1,6 +1,8 @@
 from django.contrib.auth import get_user_model
 from django.db import models
 
+from ckeditor.fields import RichTextField
+
 UserModel = get_user_model()
 
 
@@ -163,7 +165,11 @@ class News(models.Model):
         blank=True,
         null=True
     )
-    content = models.TextField()
+    content = RichTextField(
+        blank=True,
+        null=True
+    )
+    # content = models.TextField()
 
     published_at = models.DateTimeField()
 
