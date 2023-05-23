@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 
 const CategoryNav = () => {
   const [categories, setCategories] = useState([]);
-  console.log(categories);
   useEffect(() => {
     // Fetch categories on component mount
     fetchCategories();

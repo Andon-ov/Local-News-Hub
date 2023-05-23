@@ -4,11 +4,11 @@ from local_news_hub_backend.news_api.models import News, Comment, Category
 
 
 class CommentSerializer(serializers.ModelSerializer):
-    user = serializers.CharField(source='user.username')
+    # user = serializers.CharField(source='user.username')
 
     class Meta:
         model = Comment
-        fields = ('text', 'user', 'publication_date_and_time',)
+        fields = ('content', 'publication_date_and_time', 'news', 'name', 'email')
 
 
 class NewsSerializer(serializers.ModelSerializer):
@@ -49,6 +49,7 @@ class NewsSerializer(serializers.ModelSerializer):
             'title',
             'description',
             'content',
+            'author',
             'published_at',
             'updated_at',
             'news_type',
@@ -63,11 +64,11 @@ class NewsSerializer(serializers.ModelSerializer):
             'comments_count',
         )
 
-    def to_representation(self, instance):
-        representation = super().to_representation(instance)
-        comments = representation.pop('comments', [])
-        representation['comments_count'] = len(comments)
-        return representation
+    # def to_representation(self, instance):
+    #     representation = super().to_representation(instance)
+    #     comments = representation.pop('comments', [])
+    #     representation['comments_count'] = len(comments)
+    #     return representation
 
 
 class CategorySerializer(serializers.ModelSerializer):

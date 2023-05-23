@@ -25,7 +25,7 @@ class TagAdmin(admin.ModelAdmin):
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ('text', 'publication_date_and_time', 'news', 'user')
+    list_display = ('content', 'publication_date_and_time', 'news', 'name', 'email')
 
 
 @admin.register(Like)

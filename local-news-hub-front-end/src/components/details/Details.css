@@ -1,5 +1,5 @@
 .details__title {
-    margin-bottom: 40px;
+    text-align: center;
 }
 
 .details__description {
@@ -13,7 +13,7 @@
     display: flex;
     justify-content: space-around;
     color: white;
-    background-color:var(--mainBlack);
+    background-color: var(--mainBlack);
     /* margin-bottom: 0px; */
 }
 
@@ -29,5 +29,21 @@
 }
 
 .details__content {
-    padding: 40px 150px 80px 150px;
+    padding: 40px 50px 80px 50px;
+    /* font-weight: 200; */
+    /* letter-spacing: 1px; */
+    font-size: 1.0625rem;
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
 }
+
+.details__content .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) {
+    border: unset
+}
+
+.carousel .thumbs-wrapper.axis-vertical {
+    background-color: var(--mainBlack);
+    margin: unset;
+    padding: 10px;
+}
+

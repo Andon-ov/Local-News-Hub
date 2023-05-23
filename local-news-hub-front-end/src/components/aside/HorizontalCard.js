@@ -5,7 +5,6 @@ import './HorizontalCard.css';
 import {formatDate} from '../../services/dateService';
 
 const HorizontalCard = ({news}) => {
-    console.log(news);
 
 
     return (<Card className="horizontalCard">
