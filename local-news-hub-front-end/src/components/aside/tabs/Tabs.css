@@ -1,7 +1,7 @@
 .tabs {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
 }
 
 .tabs__wrapper {
@@ -11,7 +11,7 @@
 
 .tabs__btn {
     all: unset;
-    background-color:var(--mainBlack);
+    background-color: var(--mainBlack);
     color: white;
     font-weight: bold;
     padding: 10px;
@@ -20,7 +20,7 @@
 }
 
 .tabs__btn:focus {
-    color:var(--mainBlack);
+    color: var(--mainBlack);
     border: 1px solid var(--mainColor);
     background-color: var(--mainColor);
 }

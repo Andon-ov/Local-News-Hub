@@ -6,10 +6,7 @@
 }
 
 .login__form {
-    /* border: 1px solid var(--mainColor); */
     padding: 100px 120px;
-    
-
 }
 
 .login__title {
@@ -26,7 +23,6 @@
 .form-control:focus {
     border: 1px solid var(--mainColor);
     box-shadow: 0 0 0 0.25rem rgba(var(--mainShadowColor), 0.25);
-
 }
 
 
@@ -43,7 +39,7 @@
 
 .btn {
     border-radius: unset;
-    background-color:var(--mainBlack);
+    background-color: var(--mainBlack);
     border: 1px solid transparent;
     width: 100%;
 }

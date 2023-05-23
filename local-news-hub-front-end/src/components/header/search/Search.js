@@ -1,16 +1,14 @@
-import React, { useState } from 'react';
-import { Form, FormControl, Button } from 'react-bootstrap';
-import Card from '../singlePage/main/VerticalCard';
-
-import { useContext } from 'react';
-import { NewsContext } from '../../contexts/NewsContext';
+import React, {useContext, useState} from 'react';
+import {Button, Form, FormControl} from 'react-bootstrap';
+import Card from '../../main/main/VerticalCard';
+import {NewsContext} from '../../../contexts/NewsContext';
 import './Search.css';
 
 
 const SearchPage = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [result, setResult] = useState([]);
-    const { news } = useContext(NewsContext);
+    const {news} = useContext(NewsContext);
 
     const handleSearch = (event) => {
         event.preventDefault();
@@ -41,12 +39,12 @@ const SearchPage = () => {
             </Form>
 
             <div className='search__result'>
-             
+
                 {searchTerm.length === 0
                     ? <p className='search__for'>Enter search term</p>
                     : result.length === 0
                         ? <p className='search__notFound'>Result not fount</p>
-                        : result.map(x => <Card key={x._id} news={x} />)}
+                        : result.map(x => <Card key={x._id} news={x}/>)}
             </div>
 
         </div>

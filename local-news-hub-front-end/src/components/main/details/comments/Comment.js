@@ -1,5 +1,5 @@
+import {formatDate} from '../../../../services/dateService';
 
-import { formatDate } from '../../services/dateService';
 function Comment({comment}) {
     return (
         <div className="Comments">
@@ -12,6 +12,7 @@ function Comment({comment}) {
 
     );
 }
+
 export default Comment;
 
 

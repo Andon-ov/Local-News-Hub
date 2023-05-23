@@ -21,9 +21,10 @@
     color: var(--mainColor);
 }
 
-.footer__link:focus{
+.footer__link:focus {
     color: red;
 }
-p{
+
+p {
     margin: 0;
 }

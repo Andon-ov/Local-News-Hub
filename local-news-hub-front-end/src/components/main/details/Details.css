@@ -37,13 +37,13 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.details__content .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) {
+.details__content .ck.ck-editor__main > .ck-editor__editable:not(.ck-focused) {
     border: unset
 }
 
 .carousel .thumbs-wrapper.axis-vertical {
-    background-color: var(--mainBlack);
-    margin: unset;
-    padding: 10px;
+    /*background-color: var(--mainBlack);*/
+    /*margin: unset;*/
+    /*padding: 10px;*/
 }
 

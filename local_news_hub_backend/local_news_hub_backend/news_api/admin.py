@@ -5,7 +5,7 @@ from local_news_hub_backend.news_api.models import Category, Video, Tag, Comment
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('title', 'created_at', 'updated_at',)
+    list_display = ('title', 'created_at', 'updated_at')
 
 
 @admin.register(Image)

@@ -11,21 +11,20 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Nav from './components/header/nav/Nav';
 import LogoAndAd from './components/header/logoAndAd/LogoAndAd';
-import Login from './components/login/Login';
-import SinglePage from './components/singlePage/SinglePage';
-import Register from './components/register/Register';
-import Logout from './components/Logout';
-import Details from './components/details/Details';
+import Login from './components/header/login/Login';
+import SinglePage from './components/main/SinglePage';
+import Register from './components/header/register/Register';
+import Logout from './components/header/Logout';
+import Details from './components/main/details/Details';
 import Aside from './components/aside/Aside';
 import NoMatch from './components/NoMatch';
-import SearchPage from './components/search/Search';
+import SearchPage from './components/header/search/Search';
 import TopHeader from './components/header/topHeader/TopHeader';
 import Footer from './components/footer/Footer';
 import Contact from './components/footer/contact/Contact';
 import Advertise from './components/footer/advertise/Advertise';
 import Terms from './components/footer/terms/Terms';
 import Subscriptions from './components/footer/subscriptions/Subscriptions';
-import CategoryNav from './components/header/CategoryNav';
 import CategoryDetails from './components/header/CategoryDetails';
 function App() {
 
@@ -39,7 +38,6 @@ function App() {
               <header className="header">
                 <LogoAndAd />
                 <Nav />
-                <CategoryNav/>
       
               </header>
               <section className="wrapper">

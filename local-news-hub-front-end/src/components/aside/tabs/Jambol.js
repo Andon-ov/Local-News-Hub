@@ -1,7 +1,6 @@
 import {useContext} from 'react';
 import {NewsContext} from '../../../contexts/NewsContext';
-import HorizontalCard from '../HorizontalCard';
-
+import HorizontalCard from '../horizontalCard/HorizontalCard';
 
 
 function Jambol() {

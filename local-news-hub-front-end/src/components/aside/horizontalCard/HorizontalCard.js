@@ -2,7 +2,7 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import {Link} from 'react-router-dom';
 import './HorizontalCard.css';
-import {formatDate} from '../../services/dateService';
+import {formatDate} from '../../../services/dateService';
 
 const HorizontalCard = ({news}) => {
 

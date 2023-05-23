@@ -3,8 +3,8 @@ import './Hero';
 
 function Hero() {
     return (<section className="hero">
-            <HeroCarousel/>
-        </section>);
+        <HeroCarousel/>
+    </section>);
 }
 
 export default Hero;

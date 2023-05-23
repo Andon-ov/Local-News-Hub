@@ -1,12 +1,17 @@
 import './TopHeader.css';
-import { WiHumidity } from 'react-icons/wi';
-import { FaWind } from 'react-icons/fa';
-import { GrFacebook,GrInstagram, GrTwitter, GrYoutube } from 'react-icons/gr';
-import { formatDate } from '../../../services/dateService';
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import {WiHumidity} from 'react-icons/wi';
+import {FaWind} from 'react-icons/fa';
+import {GrFacebook, GrInstagram, GrTwitter, GrYoutube} from 'react-icons/gr';
+import {formatDate} from '../../../services/dateService';
+import {Link} from 'react-router-dom';
+import {useContext, useState} from 'react';
+import {AuthContext} from '../../../contexts/AuthContext';
+
+
+import {Nav} from 'react-bootstrap';
 
 function TopHeader() {
+    const {user} = useContext(AuthContext);
     //   const [weatherData, setWeatherData] = useState(null);
     const [weatherData, setWeatherData] = useState({
         location: {
@@ -78,39 +83,70 @@ function TopHeader() {
     //   }
 
     // Render weather information
+
+
+    const anonymous = (<div className="userButtons">
+        <Nav.Link as={Link} to="/search">
+            Search
+        </Nav.Link>
+        <Nav.Link as={Link} to="/login">
+            Login
+        </Nav.Link>
+        <Nav.Link as={Link} to="/register">
+            Register
+        </Nav.Link>
+
+
+    </div>);
+
+    const loggedUser = (<div className="userButtons">
+        <Nav.Link as={Link} to="/search">
+            Search
+        </Nav.Link>
+
+        <p className="nav__user">Welcome {user.username}!</p>
+        <Nav.Link as={Link} to="/logout">
+            Logout
+        </Nav.Link>
+
+    </div>);
     return (<section className="topHeader">
         <ul className="weather">
             <li className="topHeader__location">{weatherData.location.name}</li>
             <li className="topHeader__conditionAndTemp">
-                <img src={weatherData.current.condition.icon} alt="" />
+                <img src={weatherData.current.condition.icon} alt=""/>
                 {weatherData.current.temp_c}°C
             </li>
             <li className="topHeader__humidity">
-                <WiHumidity />
+                <WiHumidity/>
                 &nbsp;<span>{weatherData.current.humidity}%</span>
             </li>
             <li className="topHeader__wind">
-                <FaWind />
+                <FaWind/>
                 &nbsp;<span>{weatherData.current.wind_kph}</span>
             </li>
             <li className="topHeader__time">{formatDate(weatherData.location.localtime)}</li>
         </ul>
         <ul className="social">
             <li className="whether__icon facebook">
-                <Link to='https://www.youtube.com/@EraTVJambol' target='blank_'><GrFacebook /></Link>
+                <Link to='https://www.youtube.com/@EraTVJambol' target='blank_'><GrFacebook/></Link>
 
             </li>
             <li className="whether__icon instagram">
-                <Link><GrInstagram /></Link>
+                <Link><GrInstagram/></Link>
             </li>
             <li className="whether__icon youtube">
-                <Link><GrYoutube /></Link>
+                <Link><GrYoutube/></Link>
             </li>
             <li className="whether__icon twitter">
-                <Link><GrTwitter /></Link>
+                <Link><GrTwitter/></Link>
             </li>
-          
+
         </ul>
+
+        <div>
+            {user.email !== '' ? loggedUser : anonymous}
+        </div>
     </section>);
 }
 

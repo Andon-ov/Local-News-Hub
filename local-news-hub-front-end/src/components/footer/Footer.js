@@ -1,5 +1,6 @@
 import './Footer.css';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
+
 function Footer() {
     const date = new Date();
     const year = date.getFullYear();
@@ -17,8 +18,10 @@ function Footer() {
                 <Link className='footer__link' to="/subscriptions">Subscriptions</Link>
 
             </div>
-            <p>Copyright &copy; {year} Local News Portal. The LNH is not responsible for the content of external sites.</p>
+            <p>Copyright &copy; {year} Local News Portal. The LNH is not responsible for the content of external
+                sites.</p>
         </section>
     );
 }
+
 export default Footer;
