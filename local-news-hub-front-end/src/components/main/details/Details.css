@@ -47,3 +47,22 @@
     /*padding: 10px;*/
 }
 
+
+
+/* comment */
+
+
+.details__comments-section {
+    margin-top: 20px;
+  }
+  
+  .details__comments-heading {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .details__no-comments {
+    color: #888;
+  }
+  

@@ -14,10 +14,10 @@ function VerticalCard({ news }) {
                 />
             </div>
         </Link>
+
         <Link to={`/news/${news.id}`}>
             <Card.Text className="verticalCard__date">
                 {formatDate(news.published_at)}
-
             </Card.Text>
             <Card.Body>
                 <Card.Title>{news.title}</Card.Title>

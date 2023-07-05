@@ -1,12 +1,16 @@
-import {formatDate} from '../../../../services/dateService';
+import { formatDate } from '../../../../services/dateService';
+import './Comment.css';
 
-function Comment({comment}) {
+function Comment({ comment }) {
     return (
-        <div className="Comments">
-            <p>{comment.content}</p>
-            <p>{formatDate(comment.publication_date_and_time)}</p>
-            <p>{comment.name}</p>
-            <p>{comment.email}</p>
+        <div className="comment">
+            <p className='comment__content'>{comment.content}</p>
+            <p className='comment__date' >Date: {formatDate(comment.publication_date_and_time)}</p>
+            <div className='comment__info'>
+                <p className='comment__author-name'>Name: {comment.name}</p>
+                <p className='comment__author-email'>Email: {comment.email}</p>
+                
+            </div>
         </div>
 
 
@@ -14,12 +18,4 @@ function Comment({comment}) {
 }
 
 export default Comment;
-
-
-
-
-
-
-
-
 

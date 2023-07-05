@@ -1,0 +1,37 @@
+.comment {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.comment__author-name {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.comment__author-email {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.comment__date {
+  font-size: 12px;
+  color: #888;
+  margin: 5px 0;
+}
+
+.comment__content {
+  font-size: 14px;
+}
+
+.comment__content p:last-child {
+  margin-bottom: 0;
+}
+
+.comment__info {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}

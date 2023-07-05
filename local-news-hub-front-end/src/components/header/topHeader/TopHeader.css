@@ -25,69 +25,12 @@
     font-size: 22px;
 }
 
-.social {
-    display: flex;
-    gap: 20px
-}
-
 .whether__icon {
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
 }
 
-.facebook.whether__icon {
-    background-color: #1B7BFD;
-    border: 1px solid #1B7BFD;
-    color: white;
-}
-
-.instagram.whether__icon {
-    background-color: #C23785;
-    border: 1px solid #C23785;
-    color: white;
-}
-
-.youtube.whether__icon {
-    background-color: #EF5043;
-    border: 1px solid #EF5043;
-    color: white;
-}
-
-.twitter.whether__icon {
-    background-color: #42C0F5;
-    border: 1px solid #42C0F5;
-    color: white;
-}
-
-a {
-    color: unset;
-}
-
-a:hover {
-    color: unset;
-}
-
-/* from here */
-.facebook.whether__icon:hover {
-    background-color: white;
-    color: #1B7BFD;
-}
-
-.instagram.whether__icon:hover {
-    background-color: white;
-    color: #C23785;
-}
-
-.youtube.whether__icon:hover {
-    background-color: white;
-    color: #EF5043;
-}
-
-.twitter.whether__icon:hover {
-    background-color: white;
-    color: #42C0F5;
-}
 
 ul {
     margin-bottom: 0;

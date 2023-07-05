@@ -1,7 +1,7 @@
 import './TopHeader.css';
 import {WiHumidity} from 'react-icons/wi';
 import {FaWind} from 'react-icons/fa';
-import {GrFacebook, GrInstagram, GrTwitter, GrYoutube} from 'react-icons/gr';
+
 import {formatDate} from '../../../services/dateService';
 import {Link} from 'react-router-dom';
 import {useContext, useState} from 'react';
@@ -127,22 +127,7 @@ function TopHeader() {
             </li>
             <li className="topHeader__time">{formatDate(weatherData.location.localtime)}</li>
         </ul>
-        <ul className="social">
-            <li className="whether__icon facebook">
-                <Link to='https://www.youtube.com/@EraTVJambol' target='blank_'><GrFacebook/></Link>
-
-            </li>
-            <li className="whether__icon instagram">
-                <Link><GrInstagram/></Link>
-            </li>
-            <li className="whether__icon youtube">
-                <Link><GrYoutube/></Link>
-            </li>
-            <li className="whether__icon twitter">
-                <Link><GrTwitter/></Link>
-            </li>
-
-        </ul>
+       
 
         <div>
             {user.email !== '' ? loggedUser : anonymous}
