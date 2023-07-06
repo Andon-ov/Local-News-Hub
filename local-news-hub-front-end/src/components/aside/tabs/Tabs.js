@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Straldja from './Straldja';
-import Jambol from './Jambol';
+import NewsComponent from './NewsComponent';
 import Sliven from './Sliven';
 import './Tabs.css';
 
@@ -17,15 +17,15 @@ const Tabs = () => {
                 <button className="tabs__btn" onClick={() => toggleElement('Straldja')}>
                     Straldja
                 </button>
-                <button className="tabs__btn" onClick={() => toggleElement('Jambol')}>
-                    Jambol
+                <button className="tabs__btn" onClick={() => toggleElement('NewsComponent')}>
+                    Other News
                 </button>
                 <button className="tabs__btn" onClick={() => toggleElement('Sliven')}>
                     Sliven
                 </button>
             </div>
             {activeElement === 'Straldja' && <Straldja/>}
-            {activeElement === 'Jambol' && <Jambol/>}
+            {activeElement === 'NewsComponent' && <NewsComponent/>}
             {activeElement === 'Sliven' && <Sliven/>}
         </div>
     );
