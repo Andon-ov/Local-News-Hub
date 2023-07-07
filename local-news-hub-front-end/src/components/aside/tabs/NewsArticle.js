@@ -32,17 +32,3 @@ const NewsArticle = ({ article }) => {
 
 }
 export default NewsArticle;
-
-//   return (
-//     <div>
-//       <h2>{title}</h2>
-//       <p>{description}</p>
-//       <p>Author: {author}</p>
-//       <p>Published At: {publishedAt}</p>
-//       <p>Source: {source.name}</p>
-//       <img src={urlToImage} alt={title} />
-//       <p>{content}</p>
-//       <a href={url} target="_blank" rel="noopener noreferrer">Read More</a>
-//     </div>
-//   );
-// };

@@ -1,59 +1,39 @@
-/* Add styles to the comment form */
-.comment-form {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f7f7f7;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .comment-form label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .comment-form input[type="text"],
-  .comment-form input[type="email"],
-  .comment-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .comment-form textarea {
-    resize: vertical;
-    min-height: 100px;
-  }
-  
-  .comment-form button[type="submit"] {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .comment-form button[type="submit"]:hover {
-    background-color: #45a049;
-  }
-  
-  .comment-form button[type="submit"]:focus {
-    outline: none;
-  }
-  
-  .comment-form .success-message {
-    margin-top: 10px;
-    color: #4caf50;
-  }
-  
-  .comment-form .error-message {
-    margin-top: 10px;
-    color: #f44336;
-  }
-  
+#form-main {
+  width: 100%;
+  float: left;
+  padding-top: 0px;
+}
+textarea {
+  width: 100%;
+  height: 150px;
+  line-height: 150%;
+  resize: none;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #dddddd;
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #dddddd;
+}
+
+input:hover,
+textarea:hover,
+input:focus,
+textarea:focus {
+  background-color: rgb(234, 234, 234);
+}
+
+.submit {
+  background-color: var(--mainBlack);
+  padding: 5px 50px;
+  margin: 12px 0;
+  font-size: 22px;
+  color: white;
+}
+
+.submit:hover {
+  background-color: var(--mainColor);
+}

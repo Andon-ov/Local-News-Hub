@@ -1,8 +1,9 @@
 from rest_framework import generics as rest_generic_views
 from rest_framework.response import Response
 
-from local_news_hub_backend.news_api.models import News, Category
-from local_news_hub_backend.news_api.serializers import NewsSerializer, CategorySerializer
+
+from local_news_hub_backend.news_api.models import News, Category, Comment
+from local_news_hub_backend.news_api.serializers import CommentSerializer, NewsSerializer, CategorySerializer
 
 
 class ListNewsApiView(rest_generic_views.ListAPIView):
@@ -30,3 +31,8 @@ class DetailsNewsView(rest_generic_views.RetrieveAPIView):
 class ListCategoriesApiView(rest_generic_views.ListAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+
+
+class CommentCreateAPIView(rest_generic_views.CreateAPIView):
+    queryset = Comment.objects.all()
+    serializer_class = CommentSerializer

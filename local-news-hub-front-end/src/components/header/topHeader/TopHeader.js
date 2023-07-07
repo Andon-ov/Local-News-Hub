@@ -7,7 +7,6 @@ import {Link} from 'react-router-dom';
 import {useContext, useState} from 'react';
 import {AuthContext} from '../../../contexts/AuthContext';
 
-
 import {Nav} from 'react-bootstrap';
 
 function TopHeader() {

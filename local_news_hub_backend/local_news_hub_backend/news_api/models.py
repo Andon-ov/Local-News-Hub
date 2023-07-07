@@ -114,8 +114,18 @@ class Comment(models.Model):
         on_delete=models.CASCADE,
         related_name='news_comments'
     )
-    name = models.CharField(max_length=200)
-    email = models.EmailField(max_length=200)
+    name = models.CharField(
+        max_length=200,
+        blank=True,
+        null=True,
+    )
+
+    email = models.EmailField(
+        max_length=200,
+        null=True,
+    
+
+    )
 
     # user = models.ForeignKey(
     #     UserModel,
