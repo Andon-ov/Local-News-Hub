@@ -30,7 +30,7 @@ function Details() {
   if (!news) {
     return <div>Loading...</div>;
   }
-
+  console.log(news);
   const hideToolbar = (editor) => {
     // Hide the toolbar of the CKEditor
     const toolbarElement = editor.ui.view.toolbar.element;
@@ -39,7 +39,7 @@ function Details() {
 
   const images = news.images;
   const comments = news.comments;
-
+  console.log(news.videos.length);
   return (
     <div className='details'>
       <NewsCarousel images={images} />
@@ -48,7 +48,7 @@ function Details() {
         <p className='details__date'>{formatDate(news.published_at)}</p>
         <p className='details__category'>Municipality: {news.category_name}</p>
         <p className='details__views'>Views: {news.views_count}</p>
-        <p className='details__comments'>Comments ({news.comments_count})</p>
+        <p className='details__comments'>Comments ({comments.length })</p>
       </div>
       <p className='details__description'>{news.description}</p>
       <hr />
