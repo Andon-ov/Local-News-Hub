@@ -2,6 +2,7 @@ import './Details.css';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import React, { useEffect, useState } from 'react';
+import ReactPlayer from 'react-player/youtube'
 import { useParams } from 'react-router-dom';
 import * as newsService from '../../../services/newsService';
 import { formatDate } from '../../../services/dateService';
@@ -30,7 +31,6 @@ function Details() {
   if (!news) {
     return <div>Loading...</div>;
   }
-  console.log(news);
   const hideToolbar = (editor) => {
     // Hide the toolbar of the CKEditor
     const toolbarElement = editor.ui.view.toolbar.element;
@@ -39,16 +39,29 @@ function Details() {
 
   const images = news.images;
   const comments = news.comments;
-  console.log(news.videos.length);
+
+
   return (
     <div className='details'>
-      <NewsCarousel images={images} />
+
+      {news.videos[0]? (
+        <ReactPlayer url={news.videos}
+          playIcon={false}
+          width='100%'
+          height='486px'
+          controls={false}
+          playing={true}
+        />
+      ) : (
+        <NewsCarousel images={images} />
+      )}
+
       <div className='details__info'>
         <p className='details__author'>Author: {news.author}</p>
         <p className='details__date'>{formatDate(news.published_at)}</p>
         <p className='details__category'>Municipality: {news.category_name}</p>
         <p className='details__views'>Views: {news.views_count}</p>
-        <p className='details__comments'>Comments ({comments.length })</p>
+        <p className='details__comments'>Comments ({comments.length})</p>
       </div>
       <p className='details__description'>{news.description}</p>
       <hr />
