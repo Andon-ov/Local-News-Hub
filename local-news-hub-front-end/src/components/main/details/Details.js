@@ -1,59 +1,76 @@
-import './Details.css';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-import React, { useEffect, useState } from 'react';
-import ReactPlayer from 'react-player/youtube'
-import { useParams } from 'react-router-dom';
+
 import * as newsService from '../../../services/newsService';
 import { formatDate } from '../../../services/dateService';
+
 import NewsCarousel from './detailsNewsCarousel/DetailsNewsCarousel';
 import Comment from './comments/Comment';
 import CommentForm from './comments/CommentForm';
+import VideoPlayer from './VideoPlayer';
 
+import './Details.css';
 
 function Details() {
   const [news, setNews] = useState(null);
+  const [error, setError] = useState(null);
   const { newsId } = useParams();
 
   useEffect(() => {
-    // Fetch the news item with the specified ID
-    // Replace this with your actual data fetching logic
-
     // Fetch the news item from the newsService using the newsId
     newsService
       .getOne(newsId)
       .then((res) => {
+        // Set the news in the state
         setNews(res);
       })
-      .catch((error) => console.log(error));
+      // Handle error when fetching the news
+      .catch((error) => {
+        setError('Failed to fetch news. Please try again later.');
+        console.error('Error fetching news:', error);
+      });
+    // Watch for changes in newsId
   }, [newsId]);
 
+  // Show "Failed to fetch news. Please try again later." message if there have error
+  if (error) {
+    return <div>{error}</div>;
+  }
+
+  // Show "Loading..." message if there is no news
   if (!news) {
     return <div>Loading...</div>;
   }
   const hideToolbar = (editor) => {
-    // Hide the toolbar of the CKEditor
+    // Function to hide the CKEditor toolbar
     const toolbarElement = editor.ui.view.toolbar.element;
     toolbarElement.style.display = 'none';
   };
 
-  const images = news.images;
-  const comments = news.comments;
+   // Assign the images and comments from the news
+  const { images, comments } = news;
 
 
+  let handleCommentCreated = (newComment) => {
+    console.log(newComment);
+    // Add the new comment to the news state
+    setNews((prevNews) => ({
+      ...prevNews,
+      comments: [newComment, ...prevNews.comments],
+    }));
+  };
+  console.log(news.videos);
   return (
     <div className='details'>
 
-      {news.videos[0]? (
-        <ReactPlayer url={news.videos}
-          playIcon={false}
-          width='100%'
-          height='486px'
-          controls={false}
-          playing={true}
-        />
+      {news.videos[0] ? (
+        // Show VideoPlayer component if there is a video
+        <VideoPlayer url={news.videos} /> 
       ) : (
-        <NewsCarousel images={images} />
+        // Show NewsCarousel component if there are images
+        <NewsCarousel images={images} /> 
       )}
 
       <div className='details__info'>
@@ -88,9 +105,7 @@ function Details() {
       </div>
 
       <div className='details__comment-form'>
-
-        <CommentForm news={newsId} />
-
+        <CommentForm news={news} onCommentCreated={handleCommentCreated} />
       </div>
     </div>
   );

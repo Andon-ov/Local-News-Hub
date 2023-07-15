@@ -1,21 +1,31 @@
-import './CommentForm.css';
 import { useContext, useState } from 'react';
 
 import { AuthContext } from '../../../../contexts/AuthContext';
+
+import './CommentForm.css';
+
 const url = 'http://localhost:8000/news/';
 
-
-const CommentForm = (news) => {
+const CommentForm = (props) => {
   const { user } = useContext(AuthContext);
   const [content, setContent] = useState('');
   const [name, setName] = useState('');
 
+  // Get the news ID from the props and convert it to a string
+  let newsId = props.news?.id.toString();
+
+  // Create a new Date object to represent the publication date and time of the comment
+  let date = new Date();
+
+  // Get the user's email from the user object if available, otherwise set it to null
   let userEmail = user ? user.username : null;
 
+  // Define the handleFormSubmit function to handle the form submission
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
     try {
+      // Send a POST request to the API endpoint
       const response = await fetch(url + 'comments/', {
         method: 'POST',
         headers: {
@@ -24,40 +34,36 @@ const CommentForm = (news) => {
         body: JSON.stringify({
           content: content,
           name: name,
-          news: news.news,
+          news: newsId,
           email: userEmail
         }),
       });
 
       if (response.ok) {
-        // Comment created successfully
-        console.log('Comment submitted successfully');
-        // Reset the form fields after successful submission
+        // Reset the comment fields
         setContent('');
         setName('');
-        window.location.reload();
-        // TODO I will change that after I find better way to do
+
+        // Check if the onCommentCreated prop is a function
+        if (typeof props.onCommentCreated === 'function') { 
+
+          // Call the onCommentCreated function and pass the new comment data
+          props.onCommentCreated({ content, name, publication_date_and_time: date }); 
+        }
       } else {
-        // Handle the error response
         const errorData = await response.json();
-        console.error('Error submitting comment:', errorData);
+        console.error('Error submitting comment:', errorData); 
       }
     } catch (error) {
       console.error('Error submitting comment:', error);
     }
-
   };
 
-
   return (
-
     <div id="form-main">
-
       <form className="form" id="comment--form" onSubmit={handleFormSubmit}>
         <div className='text'>
-          {/* <label htmlFor="content">Comment:</label> */}
           <textarea
-
             id="content"
             placeholder='Write your comment here ...'
             value={content}
@@ -65,9 +71,7 @@ const CommentForm = (news) => {
             required
           />
         </div>
-
         <div className='name'>
-          {/* <label htmlFor="name">Name:</label> */}
           <input
             placeholder='Name'
             type="text"
@@ -77,13 +81,9 @@ const CommentForm = (news) => {
             required
           />
         </div>
-
         <button className='submit' type="submit">Send</button>
-
       </form>
-
     </div>
-
   );
 };
 
