@@ -4,7 +4,7 @@ import { formatDate } from '../../../services/dateService';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
-const NewsArticle = ({ article }) => {
+const NewsAPIArticle = ({ article }) => {
     const { source, author, title, description, url, urlToImage, publishedAt, content } = article;
     const image = (
         <div className='verticalCardImg__wrapper'>
@@ -31,4 +31,4 @@ const NewsArticle = ({ article }) => {
     </Card>);
 
 }
-export default NewsArticle;
+export default NewsAPIArticle;

@@ -1,10 +1,10 @@
 // export default OtherNews;
-import NewsArticle from './NewsArticle';
+import NewsAPIArticle from './NewsAPIArticle';
 
 import React, { useEffect, useState } from 'react';
 import { fetchNewsData } from '../../../services/newsApiService'; // Import the fetchNewsData function
 
-const NewsComponent = () => {
+const NewsAPIComponent = () => {
   const [newsData, setNewsData] = useState([]);
 
   useEffect(() => {
@@ -31,12 +31,12 @@ const NewsComponent = () => {
   return (
     <div>
       {newsData.map((article, index) => (
-        <NewsArticle key={index} article={article} />
+        <NewsAPIArticle key={index} article={article} />
       ))}
     </div>
   );
 };
 
-export default NewsComponent;
+export default NewsAPIComponent;
 
 

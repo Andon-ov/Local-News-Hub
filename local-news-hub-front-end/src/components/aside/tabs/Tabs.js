@@ -1,11 +1,10 @@
 import React, {useState} from 'react';
-import Straldja from './Straldja';
-import NewsComponent from './NewsComponent';
-import Sliven from './Sliven';
+import NewsComponent from './NewsAPIComponent';
+import MediastackAPIComponent from './MediastackAPIComponent';
 import './Tabs.css';
 
 const Tabs = () => {
-    const [activeElement, setActiveElement] = useState('Straldja');
+    const [activeElement, setActiveElement] = useState('NewsAPIComponent');
 
     const toggleElement = (element) => {
         setActiveElement(element);
@@ -14,19 +13,15 @@ const Tabs = () => {
     return (
         <div className="tabs">
             <div className="tabs__wrapper">
-                <button className="tabs__btn" onClick={() => toggleElement('Straldja')}>
-                    Straldja
+                <button className="tabs__btn" onClick={() => toggleElement('NewsAPIComponent')}>
+                    News API
                 </button>
-                <button className="tabs__btn" onClick={() => toggleElement('NewsComponent')}>
-                    Other News
-                </button>
-                <button className="tabs__btn" onClick={() => toggleElement('Sliven')}>
-                    Sliven
+                <button className="tabs__btn" onClick={() => toggleElement('MediastackAPIComponent')}>
+                Mediastack API
                 </button>
             </div>
-            {activeElement === 'Straldja' && <Straldja/>}
-            {activeElement === 'NewsComponent' && <NewsComponent/>}
-            {activeElement === 'Sliven' && <Sliven/>}
+            {activeElement === 'NewsAPIComponent' && <NewsComponent/>}
+            {activeElement === 'MediastackAPIComponent' && <MediastackAPIComponent/>}
         </div>
     );
 };
