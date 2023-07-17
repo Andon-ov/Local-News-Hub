@@ -1,6 +1,6 @@
 import React from "react";
 // import '../../main/main/VerticalCard.css';
-import "./HorizontalCard.css";
+import "./TabsCard.css";
 import { formatDate } from "../../../services/dateService";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";

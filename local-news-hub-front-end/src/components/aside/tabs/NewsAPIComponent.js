@@ -2,7 +2,7 @@
 import NewsAPIArticle from './NewsAPIArticle';
 
 import React, { useEffect, useState } from 'react';
-import { fetchNewsData } from '../../../services/newsApiService'; // Import the fetchNewsData function
+import { fetchNewsData } from '../../../services/newsApiService';
 
 const NewsAPIComponent = () => {
   const [newsData, setNewsData] = useState([]);
@@ -10,7 +10,8 @@ const NewsAPIComponent = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const articles = await fetchNewsData(); // Fetch news data using the fetchNewsData function
+        // Fetch news data using the fetchNewsData function
+        const articles = await fetchNewsData(); 
         setNewsData(articles);
       } catch (error) {
         console.error(error);

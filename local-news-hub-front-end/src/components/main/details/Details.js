@@ -7,9 +7,10 @@ import * as newsService from '../../../services/newsService';
 import { formatDate } from '../../../services/dateService';
 
 import NewsCarousel from './detailsNewsCarousel/DetailsNewsCarousel';
+import VideoCarousel from './videoCarousel/VideoCarousel';
 import Comment from './comments/Comment';
 import CommentForm from './comments/CommentForm';
-import VideoPlayer from './VideoPlayer';
+// import VideoPlayer from './videoCarousel/VideoPlayer';
 
 import './Details.css';
 
@@ -49,7 +50,7 @@ function Details() {
     toolbarElement.style.display = 'none';
   };
 
-   // Assign the images and comments from the news
+  // Assign the images and comments from the news
   const { images, comments } = news;
 
 
@@ -61,16 +62,17 @@ function Details() {
       comments: [newComment, ...prevNews.comments],
     }));
   };
-  console.log(news.videos);
   return (
     <div className='details'>
 
       {news.videos[0] ? (
         // Show VideoPlayer component if there is a video
-        <VideoPlayer url={news.videos} /> 
+        // <VideoPlayer url={news.videos} />
+        <VideoCarousel videos={news.videos} />
+
       ) : (
         // Show NewsCarousel component if there are images
-        <NewsCarousel images={images} /> 
+        <NewsCarousel images={images} />
       )}
 
       <div className='details__info'>
