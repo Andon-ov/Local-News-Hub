@@ -3,7 +3,11 @@
     flex-direction: column;
     gap: 25px;
 }
-
+.tabs__cards{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
 .tabs__wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

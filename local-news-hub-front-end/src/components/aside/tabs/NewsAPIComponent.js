@@ -29,7 +29,7 @@ const NewsAPIComponent = () => {
   }, []);
 
   return (
-    <div>
+    <div className='tabs__cards'>
       {newsData.map((article, index) => (
         <NewsAPIArticle key={index} article={article} />
       ))}
