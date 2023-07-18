@@ -9,7 +9,7 @@ function Comment({ comment }) {
             <div className='comment__info'>
                 <p className='comment__author-name'>Name: {comment.name}</p>
                 {/* <p className='comment__author-email'>Email: {comment.email}</p> */}
-                
+
             </div>
         </div>
 

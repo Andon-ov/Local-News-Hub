@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import NewsComponent from './NewsAPIComponent';
 import MediastackAPIComponent from './MediastackAPIComponent';
 import './Tabs.css';
@@ -17,11 +17,11 @@ const Tabs = () => {
                     News API
                 </button>
                 <button className="tabs__btn" onClick={() => toggleElement('MediastackAPIComponent')}>
-                Mediastack API
+                    Mediastack API
                 </button>
             </div>
-            {activeElement === 'NewsAPIComponent' && <NewsComponent/>}
-            {activeElement === 'MediastackAPIComponent' && <MediastackAPIComponent/>}
+            {activeElement === 'NewsAPIComponent' && <NewsComponent />}
+            {activeElement === 'MediastackAPIComponent' && <MediastackAPIComponent />}
         </div>
     );
 };

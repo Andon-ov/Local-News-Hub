@@ -1,13 +1,13 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import * as authService from '../../../services/authService';
-import {useContext} from 'react';
-import {AuthContext} from '../../../contexts/AuthContext';
+import { useContext } from 'react';
+import { AuthContext } from '../../../contexts/AuthContext';
 import './Login.css';
 
 const Login = () => {
-    const {login} = useContext(AuthContext);
+    const { login } = useContext(AuthContext);
     const navigate = useNavigate();
 
     async function onSubmit(e) {
@@ -38,10 +38,10 @@ const Login = () => {
     return (<div className='login'>
         <Form className='login__form' onSubmit={onSubmit}>
             <h1 className='login__title'>Login</h1>
-            <br/>
+            <br />
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" name='email'/>
+                <Form.Control type="email" placeholder="Enter email" name='email' />
                 <Form.Text className="text-muted">
                     We'll never share your email with anyone else.
                 </Form.Text>
@@ -49,10 +49,10 @@ const Login = () => {
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" name='password'/>
+                <Form.Control type="password" placeholder="Password" name='password' />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Remember me"/>
+                <Form.Check type="checkbox" label="Remember me" />
             </Form.Group>
             <Button variant="primary" type="submit">
                 Login

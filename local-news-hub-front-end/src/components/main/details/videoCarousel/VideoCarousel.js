@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ReactPlayer from 'react-player/youtube';
+import './VideoCarousel.css';
 
 const VideoCarousel = ({ videos }) => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -12,15 +13,15 @@ const VideoCarousel = ({ videos }) => {
         setActiveIndex((prevIndex) => (prevIndex - 1 + videos.length) % videos.length);
     };
     const buttons = (
-        <div className="carousel-buttons">
-            <button onClick={handlePrev}>Prev</button>
-            <button onClick={handleNext}>Next</button>
+        <div className="carousel__buttons">
+            <button className='prevBtn' onClick={handlePrev}>Prev</button>
+            <button className='nextBtn' onClick={handleNext}>Next</button>
         </div>
     )
 
     return (
-        <div className="video-carousel">
-            <div style={{ position: 'relative', width: '100%', height: '486px' }} className="video-container">
+        <div className="video__carousel">
+            <div className="video__container">
                 <ReactPlayer
 
                     url={videos[activeIndex]}
@@ -34,7 +35,6 @@ const VideoCarousel = ({ videos }) => {
             {videos.length > 1
                 ? buttons
                 : ''}
-
         </div>
     );
 };

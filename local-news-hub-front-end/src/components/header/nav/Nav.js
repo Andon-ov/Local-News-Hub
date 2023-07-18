@@ -1,7 +1,7 @@
 import './Nav.css';
-import React, {useEffect, useState} from 'react';
-import {Link} from 'react-router-dom';
-import {Nav} from 'react-bootstrap';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Nav } from 'react-bootstrap';
 
 
 const Navigation = () => {

@@ -1,11 +1,11 @@
-import {useContext} from 'react';
-import {NewsContext} from '../../contexts/NewsContext';
+import { useContext } from 'react';
+import { NewsContext } from '../../contexts/NewsContext';
 import HorizontalCard from '../main/main/VerticalCard';
 // import React, { useEffect, useState } from 'react';
-import {useParams} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 const CategoryDetails = () => {
-    const {categoryId} = useParams();
+    const { categoryId } = useParams();
     // ToDO
     // const [categoryData, setCategoryData] = useState(null);
 
@@ -20,7 +20,7 @@ const CategoryDetails = () => {
     //   fetchCategoryData();
     // }, [categoryName]);
 
-    const {news} = useContext(NewsContext);
+    const { news } = useContext(NewsContext);
     const categoryNews = news.filter(x => x.category_id === categoryId);
 
     function categoryName() {
@@ -43,7 +43,7 @@ const CategoryDetails = () => {
 
             <div className='cards'>
                 {categoryNews ? (
-                    categoryNews.map(x => <HorizontalCard news={x} key={x.id}/>)
+                    categoryNews.map(x => <HorizontalCard news={x} key={x.id} />)
                 ) : (
                     <p>Loading category details...</p>
                 )}

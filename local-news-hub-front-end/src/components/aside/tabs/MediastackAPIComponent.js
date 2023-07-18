@@ -13,7 +13,7 @@ const MediastackAPIComponent = () => {
         setNewsData(articles.data);
       } catch (error) {
         throw new Error(error.message);
-        
+
       }
     };
     fetchData();

@@ -1,16 +1,16 @@
 import './TopHeader.css';
-import {WiHumidity} from 'react-icons/wi';
-import {FaWind} from 'react-icons/fa';
+import { WiHumidity } from 'react-icons/wi';
+import { FaWind } from 'react-icons/fa';
 
-import {formatDate} from '../../../services/dateService';
-import {Link} from 'react-router-dom';
-import {useContext, useState} from 'react';
-import {AuthContext} from '../../../contexts/AuthContext';
+import { formatDate } from '../../../services/dateService';
+import { Link } from 'react-router-dom';
+import { useContext, useState } from 'react';
+import { AuthContext } from '../../../contexts/AuthContext';
 
-import {Nav} from 'react-bootstrap';
+import { Nav } from 'react-bootstrap';
 
 function TopHeader() {
-    const {user} = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
     //   const [weatherData, setWeatherData] = useState(null);
     const [weatherData, setWeatherData] = useState({
         location: {
@@ -113,20 +113,20 @@ function TopHeader() {
         <ul className="weather">
             <li className="topHeader__location">{weatherData.location.name}</li>
             <li className="topHeader__conditionAndTemp">
-                <img src={weatherData.current.condition.icon} alt=""/>
+                <img src={weatherData.current.condition.icon} alt="" />
                 {weatherData.current.temp_c}°C
             </li>
             <li className="topHeader__humidity">
-                <WiHumidity/>
+                <WiHumidity />
                 &nbsp;<span>{weatherData.current.humidity}%</span>
             </li>
             <li className="topHeader__wind">
-                <FaWind/>
+                <FaWind />
                 &nbsp;<span>{weatherData.current.wind_kph}</span>
             </li>
             <li className="topHeader__time">{formatDate(weatherData.location.localtime)}</li>
         </ul>
-       
+
 
         <div>
             {user.email !== '' ? loggedUser : anonymous}

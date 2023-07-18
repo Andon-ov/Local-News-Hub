@@ -11,7 +11,7 @@ const NewsAPIComponent = () => {
     const fetchData = async () => {
       try {
         // Fetch news data using the fetchNewsData function
-        const articles = await fetchNewsData(); 
+        const articles = await fetchNewsData();
         setNewsData(articles);
       } catch (error) {
         console.error(error);

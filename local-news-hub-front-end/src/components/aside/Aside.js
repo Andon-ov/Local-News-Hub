@@ -4,7 +4,7 @@ import './Aside.css';
 const Aside = () => {
     return (
         <aside className="aside">
-            <Tabs/>
+            <Tabs />
         </aside>
     );
 };

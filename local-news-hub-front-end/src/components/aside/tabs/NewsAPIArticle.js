@@ -17,7 +17,7 @@ const NewsAPIArticle = ({ article }) => {
         </div>
     )
     return (<Card className="horizontalCard"
-    // "display block" because do not have image and use all space!
+        // "display block" because do not have image and use all space!
         style={{ display: 'block' }}
     >
         <Link to={url} target="_blank">

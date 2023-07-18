@@ -45,14 +45,14 @@ const CommentForm = (props) => {
         setName('');
 
         // Check if the onCommentCreated prop is a function
-        if (typeof props.onCommentCreated === 'function') { 
+        if (typeof props.onCommentCreated === 'function') {
 
           // Call the onCommentCreated function and pass the new comment data
-          props.onCommentCreated({ content, name, publication_date_and_time: date }); 
+          props.onCommentCreated({ content, name, publication_date_and_time: date });
         }
       } else {
         const errorData = await response.json();
-        console.error('Error submitting comment:', errorData); 
+        console.error('Error submitting comment:', errorData);
       }
     } catch (error) {
       console.error('Error submitting comment:', error);
