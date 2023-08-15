@@ -21,7 +21,7 @@ const NewsAPIArticle = ({ article }) => {
         style={{ display: 'block' }}
     >
         <Link to={url} target="_blank">
-
+            
             <Card.Text className="horizontalCard__date">
                 {formatDate(publishedAt)}
             </Card.Text>

@@ -4,7 +4,7 @@ import MediastackAPIComponent from './MediastackAPIComponent';
 import './Tabs.css';
 
 const Tabs = () => {
-    const [activeElement, setActiveElement] = useState('NewsAPIComponent');
+    const [activeElement, setActiveElement] = useState('MediastackAPIComponent');
 
     const toggleElement = (element) => {
         setActiveElement(element);

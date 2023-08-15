@@ -11,7 +11,7 @@ export const NewsProvider = ({children}) => {
 
         newsService.getAll()
             .then((news) => {
-                setNews(news);
+                setNews(news.reverse());
             })
             .catch((error) => console.log(error));
     }, []);
