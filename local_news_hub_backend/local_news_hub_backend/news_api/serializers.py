@@ -72,12 +72,18 @@ class NewsSerializer(serializers.ModelSerializer):
 
 
 class CategorySerializer(serializers.ModelSerializer):
+    news_count = serializers.SerializerMethodField()
+
     class Meta:
         model = Category
-        fields = ('id', 'title')
+        fields = ['id', 'title', 'news_count']
+
+    def get_news_count(self, obj):
+        return obj.get_news_count() 
 
 
 class CommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
         fields = ['id', 'content', 'news', 'name', 'email', 'publication_date_and_time']
+

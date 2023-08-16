@@ -1,26 +1,14 @@
 import Card from './VerticalCard';
 import './Cards.css';
-
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { NewsContext } from '../../../contexts/NewsContext';
-
+import { useNewsLoader } from '../../../hooks/useNewsLoader';
 
 function Cards() {
     const { news } = useContext(NewsContext);
-
-    // State to keep track of the number of products displayed in the grid
-    const [loadCount, setLoadCount] = useState(8);
-
-    // Number of products to load per "Load More" click
     const productsPerLoad = 8;
+    const { loadCount, handleLoadMoreClick, displayedNews } = useNewsLoader(8, productsPerLoad, news);
 
-    // Function to handle "Load More" button click
-    const handleLoadMoreClick = () => {
-        setLoadCount((prevLoadCount) => prevLoadCount + productsPerLoad);
-    };
-
-    // Displayed news to show in the grid, based on loadCount
-    const displayedNews = news.slice(0, loadCount);
 
     return (
         <section className="cards">

@@ -31,6 +31,9 @@ class Category(models.Model):
 
     def __str__(self):
         return self.title
+    
+    def get_news_count(self):
+        return self.news_set.count()
 
     class Meta:
         ordering = ['title', 'id']
