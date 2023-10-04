@@ -10,21 +10,23 @@ function Cards() {
     const { loadCount, handleLoadMoreClick, displayedNews } = useNewsLoader(8, productsPerLoad, news);
 
 
-    return (
+    return (<>
         <section className="cards">
             {displayedNews.map((item) => (
                 <Card key={item.id} news={item} />
             ))}
 
-            {/* "Load More" button */}
-            <div className='products__button'>
-                {displayedNews.length < news.length && (
-                    <button className='loadMoreBtn' onClick={handleLoadMoreClick}>
-                        Load More
-                    </button>
-                )}
-            </div>
         </section>
+
+        {/* "Load More" button */}
+        <div className='products__button'>
+            {displayedNews.length < news.length && (
+                <button className='loadMoreBtn' onClick={handleLoadMoreClick}>
+                    Load More
+                </button>
+            )}
+        </div>
+    </>
     );
 }
 

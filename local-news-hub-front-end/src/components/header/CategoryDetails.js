@@ -19,7 +19,7 @@ const CategoryDetails = () => {
         }
     }
 
-    return (
+    return (<>
         <div className='sectionTitle'>
             <h2>{categoryName(categoryNews)}</h2>
 
@@ -38,6 +38,7 @@ const CategoryDetails = () => {
                 )}
             </div>
         </div>
+    </>
     );
 };
 

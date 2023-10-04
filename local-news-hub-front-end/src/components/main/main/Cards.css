@@ -4,3 +4,36 @@
     gap: 50px;
     grid-template-columns: repeat(2, 1fr);
 }
+
+
+.products__button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.loadMoreBtn {
+    all: unset;
+    background-color: var(--mainBlack);
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 30px;
+    box-shadow: var(--mainShadow);
+    text-align: center;
+}
+
+.loadMoreBtn:focus {
+    color: var(--mainBlack);
+    border: 1px solid var(--mainColor);
+    background-color: var(--mainColor);
+}
+
+.loadMoreBtn:hover {
+    box-shadow: var(--mainShadow);
+    background-color: var(--mainColor);
+    color: white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
