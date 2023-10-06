@@ -1,7 +1,7 @@
 .cards {
     width: 100%;
     display: grid;
-    gap: 50px;
+    gap: 30px;
     grid-template-columns: repeat(2, 1fr);
 }
 
@@ -12,9 +12,9 @@
     justify-content: space-around;
 
 }
-
 .loadMoreBtn {
     all: unset;
+    font-size: 20px;
     background-color: var(--mainBlack);
     color: white;
     font-weight: bold;

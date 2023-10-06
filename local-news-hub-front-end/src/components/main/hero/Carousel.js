@@ -1,7 +1,7 @@
-import React, {useContext} from 'react';
-import {Carousel} from 'react-bootstrap';
-import {NewsContext} from '../../../contexts/NewsContext';
-import {Link} from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Carousel } from 'react-bootstrap';
+import { NewsContext } from '../../../contexts/NewsContext';
+import { Link } from 'react-router-dom';
 import './Carousel.css';
 
 const HeroCarousel = () => {
@@ -18,6 +18,8 @@ const HeroCarousel = () => {
                                 className="carouselImg"
                                 alt={slide.title}
                             />
+
+                            {/* Carousel badge HOT */}
                             <div className="carousel__badge">{slide.news_type} news</div>
                             <div className="gradient"></div>
                         </Link>

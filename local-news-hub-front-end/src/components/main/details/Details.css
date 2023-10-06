@@ -36,7 +36,7 @@
     padding: 40px 50px 80px 50px;
     /* font-weight: 200; */
     /* letter-spacing: 1px; */
-    font-size: 1.0625rem;
+    /* font-size: 1.0625rem; */
     line-height: 1.5;
     font-family: 'Montserrat', sans-serif;
 }
@@ -61,7 +61,7 @@ margin-top: 20px;
 }
 
 .details__comments-heading {
-font-size: 18px;
+/* font-size: 18px; */
 font-weight: bold;
 margin-bottom: 10px;
 }

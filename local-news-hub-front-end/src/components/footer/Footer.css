@@ -74,6 +74,8 @@ a:hover {
     display: flex;
     gap: 30px;
     margin-left: auto;
+    justify-content: center;
+
 }
 
 .footer__link:hover {

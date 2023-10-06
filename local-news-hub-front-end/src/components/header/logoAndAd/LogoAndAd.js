@@ -7,7 +7,7 @@ function LogAndAd() {
             <span className="logo__letter">N</span>
             <span className="logo__letter">H</span>
         </h1>
-        <h3 className="logo__ad">Place&nbsp;for&nbsp;your&nbsp;ads&nbsp;here</h3>
+        <h4 className="logo__ad">Place&nbsp;for&nbsp;your&nbsp;ads&nbsp;here</h4>
     </section>);
 }
 

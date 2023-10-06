@@ -5,12 +5,12 @@ import './SinglePage.css';
 function SinglePage() {
     return (
         <main className="main">
-            <Hero/>
+            <Hero />
             <div className="sectionTitle">
                 <h2>Latest News</h2>
                 {/* <hr className='divider'/> */}
             </div>
-            <Cards/>
+            <Cards />
         </main>
     );
 }

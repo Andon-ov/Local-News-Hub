@@ -30,7 +30,7 @@ textarea:focus {
   background-color: var(--mainBlack);
   padding: 5px 50px;
   margin: 12px 0;
-  font-size: 22px;
+  font-size: 20px;
   color: white;
 }
 

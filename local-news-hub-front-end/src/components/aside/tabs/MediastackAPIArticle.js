@@ -19,7 +19,8 @@ const MediastackAPIArticle = ({ article }) => {
   return (
     <Card className="horizontalCard">
       <Link to={url} target="_blank">
-        {image ? urlToImage : ""}
+        {/* image */}
+        {/* {image ? urlToImage : ""} */}
         <Card.Text className="horizontalCard__date">
           {formatDate(published_at)}
         </Card.Text>
@@ -28,7 +29,9 @@ const MediastackAPIArticle = ({ article }) => {
       <Link to={url} target="_blank">
         <Card.Body>
           <Card.Title className="horizontalCard__title">{title}</Card.Title>
-          <Card.Text className="horizontalCard__description" >{description}</Card.Text>
+          <br />
+          {/* description */}
+          {/* <Card.Text className="horizontalCard__description" >{description}</Card.Text> */}
         </Card.Body>
       </Link>
     </Card>
