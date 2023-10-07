@@ -1,6 +1,8 @@
 import './TopHeader.css';
 import { WiHumidity } from 'react-icons/wi';
 import { FaWind } from 'react-icons/fa';
+import { FcSearch } from "react-icons/fc";
+
 
 import { Link } from 'react-router-dom';
 import { useContext, useState, useEffect } from 'react';
@@ -50,8 +52,8 @@ function TopHeader() {
     // Render weather information
 
     const anonymous = (<div className="userButtons">
-        <Nav.Link as={Link} to="/search">
-            Search
+        <Nav.Link className='searchIcon' as={Link} to="/search">
+            <FcSearch size={40} />
         </Nav.Link>
         <Nav.Link className='login' as={Link} to="/login">
             Login
@@ -76,12 +78,12 @@ function TopHeader() {
     </div>);
 
     const formattedDateAndTime = new Date(weatherData.location.localtime).toLocaleString([], {
-        year: 'numeric',
-        month: 'long',
+        // year: 'numeric',
+        month: 'short',
         day: '2-digit',
-        hour: '2-digit',
-        minute: '2-digit',
-        hour12: true
+        // hour: '2-digit',
+        // minute: '2-digit',
+        // hour12: true
     });
 
     return (<section className="topHeader">

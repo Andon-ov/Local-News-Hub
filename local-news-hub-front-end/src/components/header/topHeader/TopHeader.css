@@ -8,10 +8,21 @@
     box-shadow: var(--mainShadow);
 }
 
+
+.searchIcon:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+
 .weather {
     gap: 30px;
     display: flex;
     align-items: center;
+}
+
+.topHeader__location {
+    font-size: 20px;
 }
 
 .topHeader__humidity,
@@ -19,10 +30,6 @@
 .topHeader__conditionAndTemp {
     display: flex;
     align-items: center;
-}
-
-.topHeader__location {
-    /* font-size: 22px; */
 }
 
 .whether__icon {

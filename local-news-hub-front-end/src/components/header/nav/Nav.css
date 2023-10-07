@@ -14,9 +14,33 @@
     flex-wrap: wrap;
 }
 
-.home.nav-link {
-    padding-left: 30px;
+/*  */
+.nav-toggler {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
 }
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+/* .home.nav-link {
+    padding-left: 30px;
+} */
+
+.navbar-toggler {
+    background-color: white;
+}
+
+.home {
+    margin-top: 20px;
+}
+
 
 .nav .navBar .nav-link {
     background-color: var(--mainBlack);
@@ -43,4 +67,15 @@
 .nav__user {
     text-align: center;
     vertical-align: baseline;
+}
+
+.navbar-toggler {
+    font-size: 16px;
+    font-weight: 100;
+    color: white;
+}
+
+.navbar-toggler.collapsed:hover {
+    background-color: var(--mainColor);
+
 }

@@ -16,6 +16,28 @@ code {
 @media (max-width: 549px) {
 
   #root .topHeader {
+    padding: 0 5% 3% 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .topHeader .weather {
+    gap: 10px;
+  }
+
+  .weather .topHeader__humidity {
+    display: none;
+  }
+
+  .weather .topHeader__wind {
+    display: none;
+  }
+
+  .userButtons .login {
+    display: none;
+  }
+
+  .userButtons .register {
     display: none;
   }
 
@@ -25,6 +47,7 @@ code {
   }
 
   .logo .logo__ad {
+    white-space: pre-wrap;
     padding: 0 10%;
   }
 
@@ -32,8 +55,14 @@ code {
     width: 95%;
   }
 
+  .content__wrapper .wrapper .details {
+    display: block;
+    margin-bottom: 450px;
+  }
+
   .content__wrapper .wrapper {
     display: block;
+    margin-bottom: 150px;
   }
 
   .header .navBar {
@@ -43,17 +72,18 @@ code {
   }
 
   nav.nav ul li {
-    margin-bottom:  10px;
     border-bottom: 1px solid var(--mainColor);
   }
 
   .header .nav {
-    display: block;
-    padding: 0;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
   }
 
   nav.nav .navBar .nav-link {
-    padding: 0
+    padding: 0;
+    white-space: pre-wrap;
   }
 
   .wrapper .aside {
@@ -79,40 +109,54 @@ code {
   .verticalCard .verticalCardImg__wrapper {
     height: unset;
   }
+
   .verticalCard {
     margin-bottom: 20px;
   }
 
   .details__info {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
   }
 
+
   .details .details__info p {
-    padding: 3px 0;
+    padding: 0;
+    margin: 0;
   }
 
   .details .details__content {
     padding: 2%;
   }
 
-  .carousel .thumbs-wrapper.axis-vertical{
+  .carousel .thumbs-wrapper.axis-vertical {
     display: none;
   }
 
-  main.main .cards {
-    gap: 10px;
+  .search .search__result {
+    display: block;
+
+  }
+
+  .search__result .search__for {
+    padding-left: 0;
+  }
+
+  .search__result .search__notFound {
+    padding-left: 0;
+  }
+
+  .search .search__form {
+    padding: 0;
   }
 
   div div.cards {
     gap: 10px;
   }
 
-  .tabs .tabs__cards {
-    gap: 5px;
-  }
-
   #root .footer {
-    /* display: none; */
     flex-direction: column;
     padding: 5%;
     gap: 20px;
@@ -124,15 +168,16 @@ code {
 
   .footer .social {
     width: 100%;
-    /* justify-content: space-evenly; */
+    justify-content: center;
   }
 
 }
 
 @media (min-width: 550px) and (max-width: 768px) {
-  .topHeader {
+  #root .topHeader {
     width: 100%;
-    /* font-size: 14px; */
+    justify-content: space-around;
+
   }
 
   .topHeader .weather {
@@ -152,8 +197,21 @@ code {
     width: 95%;
   }
 
+  .header .nav {
+    display: flex;
+    justify-content: left;
+    padding: 10px;
+  }
+
+
+  .content__wrapper .wrapper .details {
+    display: block;
+    margin-bottom: 450px;
+  }
+
   .content__wrapper .wrapper {
     display: block;
+    margin-bottom: 150px;
   }
 
   .wrapper .aside {
@@ -164,16 +222,33 @@ code {
     display: block;
   }
 
-  main.main .cards {
-    gap: 10px;
+  .details__info {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+  }
+
+
+  .details .details__info p {
+    padding: 0;
+    margin: 0;
+  }
+
+  .search .search__result {
+    display: block;
   }
 
   div div.cards {
     gap: 10px;
   }
 
-  .tabs .tabs__cards {
-    gap: 5px;
+  .sectionTitle .cards {
+    display: block;
+  }
+
+  .main .cards {
+    display: block;
   }
 
   #root .footer {
@@ -190,8 +265,7 @@ code {
 
   .footer .social {
     width: 100%;
-    /* justify-content: space-evenly; */
-
+    justify-content: center;
   }
 
 }
@@ -215,11 +289,31 @@ code {
   div div.cards {
     gap: 20px;
   }
+
+  .header .nav {
+    display: flex;
+    justify-content: left;
+    padding: 15px;
+  }
+
+  .wrapper .aside {
+    display: none;
+  }
+
+  .content__wrapper .wrapper .details {
+    display: block;
+    margin-bottom: 450px;
+  }
+
+  .content__wrapper .wrapper {
+    display: block;
+    margin-bottom: 150px;
+  }
 }
 
 
 /* Styles for large screens (desktops) */
-@media (min-width: 1024px) {
+@media(min-width: 1024px) and (max-width: 1199px) {
 
   .userButtons .login,
   .userButtons .register {
@@ -228,5 +322,46 @@ code {
 
   div div.cards {
     gap: 30px;
+  }
+
+  .wrapper .aside {
+    display: none;
+  }
+
+  .content__wrapper .wrapper .details {
+    display: block;
+    margin-bottom: 450px;
+  }
+
+  .content__wrapper .wrapper {
+    display: block;
+    margin-bottom: 150px;
+  }
+
+  .header .nav {
+    display: flex;
+    justify-content: left;
+    padding: 15px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  .userButtons .login,
+  .userButtons .register {
+    display: none;
+  }
+
+  div div.cards {
+    gap: 40px;
+  }
+
+  .navbar-brand {
+    display: none
+  }
+
+  .home.nav-link {
+    margin-top: 0;
   }
 }

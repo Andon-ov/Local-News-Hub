@@ -92,7 +92,7 @@ const SearchPage = () => {
 
     return (
         <div className="search">
-            <h1 className="search__title">Search</h1>
+            <h4 className="search__title">Search</h4>
 
             {/* Search form */}
             <Form onSubmit={handleSearch} className="search__form">
@@ -109,9 +109,9 @@ const SearchPage = () => {
 
             <div className="search__result">
                 {/* Render appropriate message based on search results */}
-                {searchTerm.length === 0 && (
+                {/* {searchTerm.length === 0 && (
                     <p className="search__for">Enter search term</p>
-                )}
+                )} */}
                 {searchTerm.length > 0 && result.length === 0 && (
                     <p className="search__notFound">Result not found</p>
                 )}

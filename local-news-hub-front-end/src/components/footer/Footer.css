@@ -1,80 +1,47 @@
 .footer {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: row-reverse;
-
-    width: 100%;
-    text-align: center;
-    padding: 1% 12.6%;
     background-color: #212529;
     color: white;
+    padding: 1% 12.8%;
+    margin-top: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     align-items: center;
 }
 
-.social {
-    display: flex;
-    gap: 20px; 
-    margin-left: auto;
-}
-
-.facebook.whether__icon {
-    background-color: #1B7BFD;
-    border: 1px solid #1B7BFD;
-    color: white;
-}
-
-.instagram.whether__icon {
-    background-color: #C23785;
-    border: 1px solid #C23785;
-    color: white;
-}
-
-.youtube.whether__icon {
-    background-color: #EF5043;
-    border: 1px solid #EF5043;
-    color: white;
-}
-
-.twitter.whether__icon {
-    background-color: #42C0F5;
-    border: 1px solid #42C0F5;
-    color: white;
-}
-
-a {
-    color: unset;
-}
-
-a:hover {
-    color: unset;
-}
-
-/* from here */
-.facebook.whether__icon:hover {
-    background-color: white;
-    color: #1B7BFD;
-}
-
-.instagram.whether__icon:hover {
-    background-color: white;
-    color: #C23785;
-}
-
-.youtube.whether__icon:hover {
-    background-color: white;
-    color: #EF5043;
-}
-
-.twitter.whether__icon:hover {
-    background-color: white;
-    color: #42C0F5;
-}
 
 .footer__links {
+    position: relative;
     display: flex;
-    gap: 30px;
-    margin-left: auto;
+    gap: 20px;
     justify-content: center;
+    margin-bottom: 20px;
+}
+
+.footer__link {
+    color: white;
+    text-decoration: none;
+    /* margin: 0 20px; */
+    transition: color 0.3s ease;
+}
+
+.up {
+    color: var(--mainColor);
+
+    border-radius: 60%;
+    border: 1px solid var(--mainColor);
+    /* padding: 10px; */
+    position: absolute;
+    top: -330%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    padding: 10px;
+}
+
+.up :hover {
+    color: var(--mainBlack);
 
 }
 
@@ -82,10 +49,34 @@ a:hover {
     color: var(--mainColor);
 }
 
-.footer__link:focus {
-    color: red;
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-p {
-    margin: 0;
+.whether__icon a {
+    color: white;
+    text-decoration: none;
+    font-size: 28px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 50%;
+}
+
+.whether__icon a:hover {
+    color: var(--mainColor);
+}
+
+.footer p {
+    margin-top: 20px;
+}
+
+.github {
+    color: var(--mainColor);
+
+}
+
+.github:hover {
+    color: var(--mainBlackColor);
+
 }

@@ -79,8 +79,10 @@ function Details() {
         <p className='details__author'>Author: {news.author}</p>
         <p className='details__date'>{formatDate(news.published_at)}</p>
         <p className='details__category'>Municipality: {news.category_name}</p>
-        <p className='details__views'>Views: {news.views_count}</p>
-        <p className='details__comments'>Comments ({comments.length})</p>
+
+        {news.views_count > 0 ? <p className='details__views'>Views: {news.views_count}</p> : ''}
+        {comments.length > 0 ? <p className='details__comments'>Comments ({comments.length})</p> : ''}
+
       </div>
       <p className='details__description'>{news.description}</p>
       <hr />
@@ -102,7 +104,7 @@ function Details() {
             <Comment comment={x} key={x.publication_date_and_time} />
           ))
         ) : (
-          <p className='details__no-comments'>No comments available.</p>
+          <p className='details__no-comments'>No comments available you can write first.</p>
         )}
       </div>
 
