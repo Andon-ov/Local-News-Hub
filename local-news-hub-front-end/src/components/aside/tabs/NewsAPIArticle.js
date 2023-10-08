@@ -15,25 +15,28 @@ const NewsAPIArticle = ({ article }) => {
                 src={urlToImage}
             />
         </div>
-    )
-    return (<Card className="horizontalCard"
-        // "display block" because do not have image and use all space!
-        style={{ display: 'block' }}
-    >
-        <Link to={url} target="_blank">
-            
-            <Card.Text className="horizontalCard__date">
-                {formatDate(publishedAt)}
-            </Card.Text>
-
-            <Card.Body>
-                <Card.Title style={{ padding: '20px 20px 0 20px' }}>{title}</Card.Title>
-            </Card.Body>
-            {urlToImage ? image : ''}
+    );
+    return (
+        <Card className="horizontalCard"
+            // "display block" because do not have image and use all space!
+            style={{ display: 'block' }}
+        >
+            <Link to={url} target="_blank">
 
 
-        </Link>
-    </Card>);
 
-}
+                <Card.Body>
+                    <Card.Title className="horizontalCard__title" >{title}</Card.Title>
+
+                    <Card.Text className="horizontalCard__date">
+                        {formatDate(publishedAt)}
+                    </Card.Text>
+                </Card.Body>
+                {urlToImage ? image : ''}
+
+
+            </Link>
+        </Card>);
+
+};
 export default NewsAPIArticle;

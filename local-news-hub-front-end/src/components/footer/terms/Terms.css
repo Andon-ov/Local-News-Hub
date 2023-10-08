@@ -1,0 +1,30 @@
+.term__title {
+    text-align: center;
+}
+
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.policy,
+.user-profile {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.policy h2,
+.user-profile h2 {
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.policy p,
+.user-profile p {
+    font-size: 16px;
+    line-height: 1.5;
+}

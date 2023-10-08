@@ -3,15 +3,17 @@
     display: grid;
     gap: 30px;
     grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 50px;
 }
 
 
-.products__button{
+.products__button {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 
 }
+
 .loadMoreBtn {
     all: unset;
     font-size: 20px;

@@ -92,13 +92,22 @@ const SearchPage = () => {
 
     return (
         <div className="search">
-            <h4 className="search__title">Search</h4>
+            {/* eng */}
+            {/* <h4 className="search__title">Search</h4> */}
+            {/* bg */}
+            <h4 className="search__title">Търси само в заглавия</h4>
+
 
             {/* Search form */}
             <Form onSubmit={handleSearch} className="search__form">
                 <FormControl
                     type="text"
-                    placeholder="Enter search term"
+                    // eng
+                    // placeholder="Enter search term"
+
+                    // bg
+                    placeholder="Въведете дума за търсене"
+
                     value={searchTerm}
                     onChange={handleInputChange}
                     className="search__input"
@@ -113,7 +122,13 @@ const SearchPage = () => {
                     <p className="search__for">Enter search term</p>
                 )} */}
                 {searchTerm.length > 0 && result.length === 0 && (
-                    <p className="search__notFound">Result not found</p>
+
+                    // eng
+                    // <p className="search__notFound">Result not found</p>
+
+                    // bg
+                    <p className="search__notFound">Резултатът не е намерен</p>
+
                 )}
                 {searchTerm.length > 0 &&
                     result.map((x) => <Card key={x._id} news={x} />)}

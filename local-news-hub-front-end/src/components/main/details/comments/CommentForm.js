@@ -65,7 +65,12 @@ const CommentForm = (props) => {
         <div className='text'>
           <textarea
             id="content"
-            placeholder='Write your comment here ...'
+            // eng
+            // placeholder='Write your comment here ...'
+
+            // bg
+            placeholder='Напишете своя коментар тук...'
+
             value={content}
             onChange={(event) => setContent(event.target.value)}
             required
@@ -73,7 +78,12 @@ const CommentForm = (props) => {
         </div>
         <div className='name'>
           <input
-            placeholder='Name'
+            // eng
+            // placeholder='Name'
+
+            // bg
+            placeholder='Име'
+
             type="text"
             id="name"
             value={name}
@@ -81,7 +91,12 @@ const CommentForm = (props) => {
             required
           />
         </div>
-        <button className='submit' type="submit">Send</button>
+        {/* eng */}
+        {/* <button className='submit' type="submit">Send</button> */}
+
+        {/* bg */}
+        <button className='submit' type="submit">Остави своя коментар</button>
+
       </form>
     </div>
   );

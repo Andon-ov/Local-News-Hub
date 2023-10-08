@@ -57,12 +57,12 @@ code {
 
   .content__wrapper .wrapper .details {
     display: block;
-    margin-bottom: 450px;
+    margin-bottom: 500px;
   }
 
   .content__wrapper .wrapper {
     display: block;
-    margin-bottom: 150px;
+    margin-bottom: 250px;
   }
 
   .header .navBar {
@@ -84,6 +84,14 @@ code {
   nav.nav .navBar .nav-link {
     padding: 0;
     white-space: pre-wrap;
+  }
+
+  .home.nav-link {
+    display: none;
+  }
+
+  .me-auto.navbar-nav {
+    margin-top: 20px;
   }
 
   .wrapper .aside {
@@ -203,15 +211,22 @@ code {
     padding: 10px;
   }
 
+  .home.nav-link {
+    display: none;
+  }
+
+  .me-auto.navbar-nav {
+    margin-top: 20px;
+  }
 
   .content__wrapper .wrapper .details {
     display: block;
-    margin-bottom: 450px;
+    margin-bottom: 500px;
   }
 
   .content__wrapper .wrapper {
     display: block;
-    margin-bottom: 150px;
+    margin-bottom: 250px;
   }
 
   .wrapper .aside {
@@ -296,18 +311,26 @@ code {
     padding: 15px;
   }
 
+  .home.nav-link {
+    display: none;
+  }
+
+  .me-auto.navbar-nav {
+    margin-top: 20px;
+  }
+
   .wrapper .aside {
     display: none;
   }
 
   .content__wrapper .wrapper .details {
     display: block;
-    margin-bottom: 450px;
+    margin-bottom: 500px;
   }
 
   .content__wrapper .wrapper {
     display: block;
-    margin-bottom: 150px;
+    margin-bottom: 250px;
   }
 }
 
@@ -330,12 +353,12 @@ code {
 
   .content__wrapper .wrapper .details {
     display: block;
-    margin-bottom: 450px;
+    margin-bottom: 500px;
   }
 
   .content__wrapper .wrapper {
     display: block;
-    margin-bottom: 150px;
+    margin-bottom: 350px;
   }
 
   .header .nav {
@@ -344,6 +367,13 @@ code {
     padding: 15px;
   }
 
+  .home.nav-link {
+    display: none;
+  }
+
+  .me-auto.navbar-nav {
+    margin-top: 20px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -364,4 +394,6 @@ code {
   .home.nav-link {
     margin-top: 0;
   }
+
+
 }

@@ -5,7 +5,7 @@ export const fetchNewsData = async () => {
             access_key: "3961b8b72c756118bb8269dbd17cc970",
             languages: "en",
             countries: "bg",
-            limit: '14',
+            limit: '17',
             sort: 'published_desc'
         };
 

@@ -7,6 +7,7 @@ import { FcSearch } from "react-icons/fc";
 import { Link } from 'react-router-dom';
 import { useContext, useState, useEffect } from 'react';
 import { AuthContext } from '../../../contexts/AuthContext';
+import { formatDate } from '../../../services/dateService';
 
 import { Nav } from 'react-bootstrap';
 
@@ -17,6 +18,8 @@ function TopHeader() {
 
     const baseUrl = 'https://api.weatherapi.com/v1/current.json';
     const location = 'Jambol';
+    const date = new Date();
+    const monthNumber = date.getMonth() + 1;
 
     // Construct the API endpoint URL with the API key and location
     const apiUrl = `${baseUrl}?key=${apiKey}&q=${location}&aqi=no`;
@@ -45,8 +48,12 @@ function TopHeader() {
 
 
     if (!weatherData) {
-        console.log(weatherData);
-        return <div>Loading...</div>;
+        // eng
+        // return <div>Loading...</div>;
+
+        // bg
+        return <div>Зареждане...</div>;
+
     }
 
     // Render weather information
@@ -78,8 +85,8 @@ function TopHeader() {
     </div>);
 
     const formattedDateAndTime = new Date(weatherData.location.localtime).toLocaleString([], {
-        // year: 'numeric',
-        month: 'short',
+        year: 'numeric',
+        month: 'long',
         day: '2-digit',
         // hour: '2-digit',
         // minute: '2-digit',
@@ -88,7 +95,11 @@ function TopHeader() {
 
     return (<section className="topHeader">
         <ul className="weather">
-            <li className="topHeader__location">{weatherData.location.name}</li>
+            {/* eng */}
+            {/* <li className="topHeader__location">{weatherData.location.name}</li> */}
+            {/* bg */}
+            <li className="topHeader__location">Ямбол</li>
+
             <li className="topHeader__conditionAndTemp">
                 <img src={weatherData.current.condition.icon} alt="" />
                 {weatherData.current.temp_c}°C
@@ -101,7 +112,7 @@ function TopHeader() {
                 <FaWind />
                 &nbsp;<span>{weatherData.current.wind_kph}</span>
             </li>
-            <li className="topHeader__time">{formattedDateAndTime}</li>
+            <li className="topHeader__time">{formatDate(formattedDateAndTime)}</li>
 
         </ul>
 

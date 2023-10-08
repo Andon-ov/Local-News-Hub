@@ -12,6 +12,8 @@ import Comment from './comments/Comment';
 import CommentForm from './comments/CommentForm';
 // import VideoPlayer from './videoCarousel/VideoPlayer';
 
+import { LiaCommentSolid } from 'react-icons/lia';
+
 import './Details.css';
 
 function Details() {
@@ -42,7 +44,14 @@ function Details() {
 
   // Show "Loading..." message if there is no news
   if (!news) {
-    return <div>Loading...</div>;
+    // eng
+    // return <div>Loading...</div>;
+
+    // bg
+    return <div>Зареждане...</div>;
+
+
+
   }
   const hideToolbar = (editor) => {
     // Function to hide the CKEditor toolbar
@@ -76,12 +85,21 @@ function Details() {
       )}
 
       <div className='details__info'>
-        <p className='details__author'>Author: {news.author}</p>
+
+        {/* eng */}
+        {/* <p className='details__author'>Author: {news.author}</p>
         <p className='details__date'>{formatDate(news.published_at)}</p>
         <p className='details__category'>Municipality: {news.category_name}</p>
-
         {news.views_count > 0 ? <p className='details__views'>Views: {news.views_count}</p> : ''}
-        {comments.length > 0 ? <p className='details__comments'>Comments ({comments.length})</p> : ''}
+        {comments.length > 0 ? <p className='details__comments'>Comments ({comments.length})</p> : ''} */}
+
+        {/* bg */}
+        <p className='details__author'>Автор: {news.author}</p>
+        <p className='details__date'>{formatDate(news.published_at)}</p>
+        <p className='details__category'>Категория: {news.category_name}</p>
+
+        {news.views_count > 0 ? <p className='details__views'>Видяна: {news.views_count}</p> : ''}
+        {comments.length > 0 ? <p className='details__comments'>Коментари: ({comments.length})</p> : ''}
 
       </div>
       <p className='details__description'>{news.description}</p>
@@ -98,13 +116,23 @@ function Details() {
       </div>
 
       <div className='details__comments-section'>
-        <h2 className='details__comments-heading'>Comments</h2>
+        {/* eng */}
+        {/* <h2 className='details__comments-heading'>Comments</h2> */}
+
+        {/* bg */}
+        <h2 className='details__comments-heading'> <LiaCommentSolid size={50} />Коментари</h2>
+
         {comments.length > 0 ? (
           comments.map((x) => (
             <Comment comment={x} key={x.publication_date_and_time} />
           ))
         ) : (
-          <p className='details__no-comments'>No comments available you can write first.</p>
+          // eng
+          // <p className='details__no-comments'>No comments available you can write first.</p>
+
+          // bg
+          <p className='details__no-comments'>Няма налични коментари. Бъди първи, напиши коментар.</p>
+
         )}
       </div>
 

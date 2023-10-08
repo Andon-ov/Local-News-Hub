@@ -5,6 +5,7 @@
     margin-top: 150px;
     width: 100%;
     display: flex;
+    gap: 10px;
     flex-direction: column;
     text-align: center;
     align-items: center;
@@ -45,6 +46,31 @@
 
 }
 
+.contact-container {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    justify-content: center;
+
+}
+
+.contact-icon,
+.contact-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.mail,
+.phone {
+    color: var(--mainColor);
+}
+
+.mail:hover,
+.phone:hover {
+    color: var(--mainBlack);
+}
+
 .footer__link:hover {
     color: var(--mainColor);
 }
@@ -77,6 +103,6 @@
 }
 
 .github:hover {
-    color: var(--mainBlackColor);
+    color: var(--mainBlack);
 
 }
