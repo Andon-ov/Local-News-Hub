@@ -1,36 +1,162 @@
-import './Terms.css';
+import "./Terms.css";
 
 function Terms() {
     return (
-        <section className='terms'>
-            <h1>Terms</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat amet voluptate, sint eveniet alias
-                accusamus asperiores doloribus cum expedita, in dolor temporibus enim quo deleniti quisquam molestias
-                labore? Culpa, officiis reiciendis rerum eligendi nisi in quidem doloribus nulla vitae, temporibus
-                similique. Officiis totam et quidem, sapiente dolorum voluptatum molestiae? Eaque repudiandae veniam
-                consectetur nulla quo deleniti vero. Animi, dicta doloribus cupiditate ex repellat neque veniam sequi
-                molestias illo ipsa iure? Voluptates eligendi nesciunt ullam alias aut exercitationem vel reiciendis
-                ducimus totam, nostrum id error minus delectus laudantium autem excepturi suscipit architecto hic labore
-                voluptatum deleniti sunt cumque asperiores ea? Fugiat est repudiandae ratione maiores officiis ipsum
-                veniam, illo assumenda facilis perspiciatis provident nam animi iste dicta nisi soluta nostrum
-                voluptatibus blanditiis earum ab, veritatis adipisci. Harum sint voluptas molestiae mollitia quaerat
-                earum ullam, illum ut recusandae labore delectus? Laboriosam earum id ipsam. Expedita assumenda tempora
-                corporis, necessitatibus est, ratione alias magni ea rem non ipsum esse cum totam quis sed veniam ipsa!
-                Quia aut obcaecati et voluptatem dolorum temporibus inventore excepturi suscipit illum est ipsam,
-                dignissimos quam quidem rerum laudantium aperiam, iste ab mollitia perspiciatis. Dolor reprehenderit
-                ducimus sit totam labore nemo? Ullam fugit, iure quam numquam, impedit autem odio aperiam ipsa non
-                dignissimos voluptas nostrum nesciunt illo odit minima quaerat maxime recusandae, assumenda praesentium
-                vero. Illum repellendus, et quis ab dicta quidem iste fugit ea. Suscipit deleniti vitae in officia
-                perspiciatis pariatur aut assumenda minima exercitationem. Nostrum debitis numquam, repellat officiis
-                voluptas corporis voluptate expedita beatae accusantium est? Repellendus id aliquam similique voluptates
-                ipsam ut cupiditate nemo molestias, perspiciatis recusandae sunt minus tempore ipsum quos impedit ea
-                quae rerum aliquid vero consequuntur quibusdam minima tempora! Numquam exercitationem quasi, odit sequi
-                perferendis reprehenderit incidunt similique libero rerum qui praesentium assumenda dignissimos
-                corporis. Tenetur placeat corporis assumenda in architecto itaque repellat eveniet, a fugit harum nemo
-                beatae voluptatem recusandae quasi ad iusto rem laborum cupiditate cumque commodi. Numquam facilis et
-                obcaecati! Ea, dolorem nostrum nulla placeat velit mollitia id delectus iusto, tempore sapiente alias,
-                quia consequatur nam! Qui, numquam, minima cum molestiae quis et architecto, sed amet iure modi facilis
-                voluptatum!</p>
+        <section className="terms">
+            <div>
+                <h2 className="term__title">
+                    Общи Условия за Ползване на Сайта и Политика за Поверителност на
+                    Личните Данни
+                </h2>
+            </div>
+            <div className="content">
+                <section className="policy">
+                    <h2>Политика на Бисквитките</h2>
+
+                    <h3>Какво представляват бисквитките?</h3>
+
+                    <p>
+                        Бисквитките са файлове с информация, включващи неограничено текстово
+                        съдържание, които се съхраняват в компютрите на потребителя с цел
+                        подобряване работата със съответния уеб сайт. Тези файлове
+                        позволяват потребителят да бъде разпознат и уеб сайтът да бъде
+                        адаптиран спрямо неговите предпочитания. Бисквитките обикновено
+                        съдържат името на уеб сайта, към който принадлежат, времето, за
+                        което се съхраняват на компютъра на потребителя, и уникален номер.
+                    </p>
+
+                    <h3>За какво се използват бисквитките?</h3>
+
+                    <p>
+                        Бисквитките се използват за адаптиране съдържанието на уеб сайтa към
+                        предпочитанията на индивидуалния потребител и оптимизиране работата
+                        с определения уеб сайт. Използват се още за изготвянето на анонимна
+                        обща статистика, която ни помага да разберем как потребителят работи
+                        с уеб сайтовете, което помага за подобряването на тяхната структура
+                        и съдържание, като в същото време няма достъп до личната
+                        потребителска информация.
+                    </p>
+
+                    <h3>Какви бисквитки използваме?</h3>
+
+                    <p>
+                        Използваме два вида бисквитки – временни и фиксирани. Първите са
+                        временни файлове, които се генерират в компютъра на потребителя,
+                        докато той не излезе от уеб сайта или не затвори дадената апликация
+                        (уеб браузър). Фиксираните файлове остават в компютъра на
+                        потребителя за време, определено в параметрите на бисквитките, или
+                        докато не бъдат изтрити ръчно от потребителя.
+                    </p>
+
+                    <p>
+                        Бисквитки, използвани от партньори на оператор на един уебсайт,
+                        включително без ограничение потребителите на уебсайта, са обект на
+                        техни собствени политики за поверителност.
+                    </p>
+
+                    <h3>Съдържат ли бисквитките лична информация?</h3>
+
+                    <p>
+                        Личната информация, която се акумулира чрез бисквитките, може да
+                        бъде използвана само за извършване на определени операции за
+                        потребителя. Такава информация се криптира по начин, който прави
+                        достъпа до нея от неоторизирани лица невъзможен.
+                    </p>
+
+                    <h3>Изтриване на бисквитки</h3>
+
+                    <p>
+                        По правило апликациите, използвани за сърфиране в уеб сайтове,
+                        позволяват запазването на бисквитки по подразбиране. Тази настройка
+                        може да бъде променена така, че автоматичното запаметяване на
+                        бисквитки да бъде блокирано в уеб браузъра или потребителят да бъде
+                        информиран всеки път, преди бисквитките да бъдат запаметени на
+                        компютъра. Детайлна информация за различните начини за работа с
+                        бисквитки може да бъде открита в настройките на апликацията уеб
+                        браузъра.
+                    </p>
+
+                    <p>
+                        Ограничаването на бисквитките може да се отрази на някои
+                        функционалности на уеб сайта.
+                    </p>
+                </section>
+                <section className="user-profile">
+                    <h2>Потребителско Име, Email и Парола, Потребителски Профил</h2>
+                    <p>
+                        Чл.9 При регистрацията си ПОТРЕБИТЕЛЯТ посочва потребителско име
+                        (собствено име или псевдоним), email и парола.
+                    </p>
+
+
+                    <p>
+                        (1) Ако потребителското име не е заето към момента на регистрацията,
+                        ПОТРЕБИТЕЛЯТ получава потребителското име и паролата, които е
+                        заявил. Чрез тях или чрез въведеният email и паролата,
+                        регистрираният ПОТРЕБИТЕЛ получава достъп до потребителския си
+                        профил, както и възможност да ползва Услугите, изискваши
+                        регистрация.
+                    </p>
+
+                    <p>
+                        (2) Потребителското име представлява уникален код от букви, цифри и
+                        знаци, посредством които ПОТРЕБИТЕЛЯТ се индивидуализира при
+                        ползването на Услугите. Ние не проверява и не носи отговорност за
+                        истинността на потребителското име, за това дали то засяга права на
+                        трети лица и в частност право на име или други лични права, право на
+                        търговско наименование (фирма), право на запазена марка или други
+                        права на интелектуална собственост. Не се допуска до регистрация
+                        потребителски имена, съствени само от цифри, от повтарящи се еднакви
+                        букви или съдържащи непозволени символи.
+                    </p>
+
+                    <p>
+                        (3) Паролата представлява код от букви, цифри и знаци, който заедно
+                        с потребителското име или email-а служи за достъп до потребителския
+                        му профил. ПОТРЕБИТЕЛЯТ е длъжен да не прави достояние на трети лица
+                        паролата си и да уведомява незабавно ERA в случай на неправомерен
+                        достъп, както и при вероятност от такъв. ПОТРЕБИТЕЛЯТ е длъжен да
+                        полага всички грижи и да предприема необходимите мерки, които
+                        разумно се налагат, с цел опазване на паролата си и носи пълна
+                        отговорност за всички действия, които се извършват от него или от
+                        трето лице чрез използване на потребителското име и паролата или
+                        email-ът и паролата.
+                    </p>
+
+                    <p>
+                        (4) Потребителският профил представлява обособена част от Уебсайта
+                        ERA, съдържаща информация за
+                        регистрирания ПОТРЕБИТЕЛ, предоставяна в процеса на регистрация или
+                        в последствие при редакцията на личния си Потребителски профил от
+                        страна на ПОТРЕБИТЕЛЯ и съхранявана на сървър на ERA.
+                    </p>
+
+                    <p>
+                        (5) Чрез потребителския си профил ПОТРЕБИТЕЛЯТ може да редактира
+                        данните за себе си във всеки един момент.
+                    </p>
+
+                    <p>
+                        (6) Всеки ПОТРЕБИТЕЛ може да има само един активен потребителски
+                        профил.
+                    </p>
+
+                    <p>
+                        (7) Забранява се регистрацията под чуждо име (под чужда
+                        самоличност).
+                    </p>
+
+                    <p>
+                        (8) ERA си запазва правото да откаже регистрацията на лице, за
+                        което има информация или може да се направи предположение, че
+                        посочва неверни или чужди данни, както и в случаите, когато ERA е
+                        получил информация или може да се предположи злонамерено използване
+                        на предлаганите от ERA услуги или използване на Услугите в
+                        нарушение на настоящите Общи условия или в нарушение на Българското
+                        законодателство.
+                    </p>
+                </section>
+            </div>
         </section>
     );
 }

@@ -4,7 +4,7 @@ import MediastackAPIComponent from './MediastackAPIComponent';
 import './Tabs.css';
 
 const Tabs = () => {
-    const [activeElement, setActiveElement] = useState('MediastackAPIComponent');
+    const [activeElement, setActiveElement] = useState('NewsAPIComponent');
 
     const toggleElement = (element) => {
         setActiveElement(element);
@@ -14,10 +14,12 @@ const Tabs = () => {
         <div className="tabs">
             <div className="tabs__wrapper">
                 <button className="tabs__btn" onClick={() => toggleElement('NewsAPIComponent')}>
-                    News API
+                    {/* News API */}
+                    Други източници
                 </button>
                 <button className="tabs__btn" onClick={() => toggleElement('MediastackAPIComponent')}>
-                    Mediastack API
+                    {/* Mediastack API */}
+                    Вести
                 </button>
             </div>
             {activeElement === 'NewsAPIComponent' && <NewsComponent />}

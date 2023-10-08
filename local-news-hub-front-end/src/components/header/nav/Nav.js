@@ -44,22 +44,30 @@ const Navigation = () => {
     <Navbar expand="xl" className="nav" >
       <div className="navBar">
         <Container >
-          <Navbar.Brand style={{ 'color': 'white' }} href="/">Local News Hub </Navbar.Brand>
+          {/* eng */}
+          {/* <Navbar.Brand ><Link to="/" style={{ 'color': 'white' }}>Local News Hub</Link></Navbar.Brand> */}
+
+          {/* bg */}
+          <Navbar.Brand  ><Link to="/" style={{ 'color': 'white' }}>ЕРА ТВ НОВИНИ</Link></Navbar.Brand>
+
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
 
               <Nav.Link className="home" as={Link} to="/">
-                Home
+                {/*  */}
+                {/* Home */}
+                {/* bg */}
+                НАЧАЛО
               </Nav.Link>
 
 
               {categoriesWithNews.length > 0 ? (
                 categoriesWithNews.map((category) => (
                   <li key={category.id}>
-                    <Nav.Link className="nav-link" href={`/category/${category.id}`}>
+                    <Link className="nav-link" to={`/category/${category.id}`}>
                       {category.title}
-                    </Nav.Link>
+                    </Link>
                   </li>
                 ))
               ) : (

@@ -7,7 +7,12 @@ function SinglePage() {
         <main className="main">
             <Hero />
             <div className="sectionTitle">
-                <h2>Latest News</h2>
+                {/* eng */}
+                {/* <h2>Latest News</h2> */}
+
+                {/* bg */}
+                <h2>Последни новини</h2>
+
                 {/* <hr className='divider'/> */}
             </div>
             <Cards />

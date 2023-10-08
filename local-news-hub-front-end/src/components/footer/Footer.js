@@ -2,6 +2,7 @@ import './Footer.css';
 import { Link } from 'react-router-dom';
 import { GrFacebook, GrInstagram, GrTwitter, GrYoutube } from 'react-icons/gr';
 import { BiSolidHomeAlt2 } from "react-icons/bi";
+import { FaEnvelope, FaPhone } from 'react-icons/fa';
 
 
 
@@ -18,15 +19,36 @@ function Footer() {
 
 
             <div className='footer__links'>
+                {/* eng */}
+                {/* <Link className='footer__link' to="/contact">Contact Us</Link> */}
 
-                <Link className='footer__link' to="/contact">Contact Us</Link>
+                {/* bg */}
+                {/* <Link className='footer__link' to="/contact">Контакти</Link> */}
 
-                <Link className='footer__link' to="/advertise">Advertise</Link>
+                {/* eng */}
+                {/* <Link className='footer__link' to="/advertise">Advertise</Link> */}
+
+                {/* bg */}
+                {/* <Link className='footer__link' to="/advertise">Реклама</Link> */}
+
+
+                <address className="contact-container">
+                    <div className="contact-item">
+                        <FaEnvelope className="contact-icon" /> <a className='mail' href="mailto:pantera_tv1@mail.bg">pantera_tv1@mail.bg</a>
+                    </div>
+                    <div className="contact-item">
+                        <FaPhone className="contact-icon" /> <a className='phone' href="tel:087 925 0594">087 925 0594</a>
+                    </div>
+                </address>
+
+
+
+
 
 
                 <Link className='footer__link up' onClick={scrollToTop}><BiSolidHomeAlt2 size={40} /> </Link>
-
-                {/* <Link className='footer__link' to="/terms">Terms of Service</Link>
+                {/* 
+                <Link className='footer__link' to="/terms">Terms of Service</Link>
 
                 <Link className='footer__link' to="/subscriptions">Subscriptions</Link> */}
 
@@ -46,10 +68,11 @@ function Footer() {
                 </li>
 
             </ul>
-            <p>Copyright &copy; {year} Local News Portal. The LNH is not responsible for the content of external
-                sites.</p>
-            <p>Powered by: <Link to='https://github.com/Andon-ov' target='blank_'><span className='github'>Andon-ov</span></Link></p>
+            {/* <p>Copyright &copy; {year} Local News Portal. The LNH is not responsible for the content of external sites.</p> */}
 
+
+            <div>Всички права запазени &copy; {year}.&nbsp; &nbsp;  Powered by: <Link to='https://github.com/Andon-ov' target='blank_'><span className='github'>Andon-ov</span></Link></div>
+            <div> С всяко отваряне на страница от ERA, се съгласявате с <Link className='footer__link' to="/terms">Общите условия за ползване на сайта и политика за поверителност на личните данни.</Link></div>
 
         </section>
     );

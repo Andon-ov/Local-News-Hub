@@ -58,9 +58,14 @@
 }
 
 .details__comments-heading {
+    /* text-align: center;
     font-weight: 100;
-    font-style: italic;
-    margin-bottom: 10px;
+    font-style: italic; */
+    margin-bottom: 30px;
+    color: var(--mainBlack);
+    display: flex;
+    gap: 20px;
+    align-items: center;
 }
 
 

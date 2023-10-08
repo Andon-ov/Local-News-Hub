@@ -6,8 +6,9 @@ import { useNewsLoader } from '../../../hooks/useNewsLoader';
 
 function Cards() {
     const { news } = useContext(NewsContext);
-    const productsPerLoad = 8;
-    const { loadCount, handleLoadMoreClick, displayedNews } = useNewsLoader(8, productsPerLoad, news);
+    const initialLoadCount = 10;
+    const productsPerLoad = 10;
+    const { handleLoadMoreClick, displayedNews } = useNewsLoader(initialLoadCount, productsPerLoad, news);
 
 
     return (<>
@@ -22,7 +23,11 @@ function Cards() {
         <div className='products__button'>
             {displayedNews.length < news.length && (
                 <button className='loadMoreBtn' onClick={handleLoadMoreClick}>
-                    Load More
+                    {/* eng */}
+                    {/* Load More */}
+
+                    {/* bg */}
+                    Зареди още новини
                 </button>
             )}
         </div>

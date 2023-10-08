@@ -27,13 +27,22 @@ const CategoryDetails = () => {
                 {categoryNews ? (
                     displayedNews.map(x => <HorizontalCard news={x} key={x.id} />)
                 ) : (
-                    <p>Loading category details...</p>
+                    // eng
+                    // <p>Loading category details...</p>
+
+                    // bg
+                    <p>Зареждат се подробности за категорията...</p>
                 )}
             </div>
             <div className='products__button'>
                 {displayedNews.length < categoryNews.length && (
                     <button className='loadMoreBtn' onClick={handleLoadMoreClick}>
-                        Load More
+
+                        {/* eng */}
+                        {/* Load More */}
+
+                        {/* bg */}
+                        Зареди още новини
                     </button>
                 )}
             </div>

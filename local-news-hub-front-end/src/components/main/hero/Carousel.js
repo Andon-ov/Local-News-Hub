@@ -20,7 +20,12 @@ const HeroCarousel = () => {
                             />
 
                             {/* Carousel badge HOT */}
-                            <div className="carousel__badge">{slide.news_type} news</div>
+                            {/* eng */}
+                            {/* <div className="carousel__badge">{slide.news_type} news</div> */}
+
+                            {/* bg */}
+                            <div className="carousel__badge">Горещи новини</div>
+
                             <div className="gradient"></div>
                         </Link>
                         <Carousel.Caption>
