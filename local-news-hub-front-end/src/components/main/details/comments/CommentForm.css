@@ -29,7 +29,7 @@ textarea:focus {
 }
 
 .submit {
-  background-color: var(--mainBlack);
+  background-color: var(--mainSecondColor);
   padding: 5px 50px;
   margin: 12px 0;
   font-size: 20px;

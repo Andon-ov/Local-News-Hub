@@ -17,7 +17,7 @@
 .loadMoreBtn {
     all: unset;
     font-size: 20px;
-    background-color: var(--mainBlack);
+    background-color: var(--mainSecondColor);
     color: white;
     font-weight: bold;
     padding: 10px;
@@ -27,7 +27,7 @@
 }
 
 .loadMoreBtn:focus {
-    color: var(--mainBlack);
+    color: var(--mainSecondColor);
     border: 1px solid var(--mainColor);
     background-color: var(--mainColor);
 }

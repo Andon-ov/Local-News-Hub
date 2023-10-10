@@ -1,12 +1,5 @@
 .login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 65vh;
-}
-
-.login__form {
-    padding: 100px 120px;
+    padding: 5% 20%;
 }
 
 .login__title {
@@ -17,7 +10,7 @@
 .form-control {
     border: none;
     border-radius: unset;
-    border-bottom: 1px solid var(--mainBlack);
+    border-bottom: 1px solid var(--mainSecondColor);
 }
 
 .form-control:focus {
@@ -39,7 +32,7 @@
 
 .btn {
     border-radius: unset;
-    background-color: var(--mainBlack);
+    background-color: var(--mainSecondColor);
     border: 1px solid transparent;
     width: 100%;
 }

@@ -42,7 +42,7 @@
 }
 
 .up :hover {
-    color: var(--mainBlack);
+    color: var(--mainSecondColor);
 
 }
 
@@ -68,7 +68,7 @@
 
 .mail:hover,
 .phone:hover {
-    color: var(--mainBlack);
+    color: var(--mainSecondColor);
 }
 
 .footer__link:hover {
@@ -103,6 +103,6 @@
 }
 
 .github:hover {
-    color: var(--mainBlack);
+    color: var(--mainSecondColor);
 
 }

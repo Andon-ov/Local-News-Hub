@@ -1,25 +1,34 @@
 export function formatDate(dateStr) {
-    // const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    // const monthsOfYear = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-    // const daysOfWeek = ['Неделя', 'Понеделник', 'Вторник', 'Сряда', 'Четвъртък', 'Петък', 'Събота'];
-    const monthsOfYear = ["Януари", "Февруари", "Март", "Април", "Май", "Юни", "Юли", "Август", "Септември", "Октомври", "Ноември", "Декември"];
+  const now = new Date();
+  const dateObj = new Date(dateStr);
 
-    // const now = new Date();
-    const dateObj = new Date(dateStr);
+  const dayInMillis = 24 * 60 * 60 * 1000;
+  const diffInDays = Math.floor((now - dateObj) / dayInMillis);
 
-    // if (dateObj.toDateString() === now.toDateString()) {
-    //     return 'today';
-    // } else {
-
-    // let dayOfWeek = daysOfWeek[dateObj.getDay()];
-    let month = monthsOfYear[dateObj.getMonth()];
-    let day = dateObj.getDate();
-    let year = dateObj.getFullYear();
-
-    // return `${dayOfWeek}, ${day} ${month} ${year}`;
+  if (diffInDays === 0) {
+    return "днес";
+  } else if (diffInDays === 1) {
+    return "вчера";
+  } else if (diffInDays < 7) {
+    return `Преди ${diffInDays} дни`;
+  } else {
+    const monthsOfYear = [
+      "Януари",
+      "Февруари",
+      "Март",
+      "Април",
+      "Май",
+      "Юни",
+      "Юли",
+      "Август",
+      "Септември",
+      "Октомври",
+      "Ноември",
+      "Декември",
+    ];
+    const month = monthsOfYear[dateObj.getMonth()];
+    const day = dateObj.getDate();
+    const year = dateObj.getFullYear();
     return `${day} ${month} ${year}`;
-
-    // }
-    // Add more conditions for displaying other relative date strings,
-    //  such as "yesterday" or "last week"
-};
+  }
+}

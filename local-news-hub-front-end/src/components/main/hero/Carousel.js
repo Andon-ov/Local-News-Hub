@@ -1,42 +1,51 @@
-import React, { useContext } from 'react';
-import { Carousel } from 'react-bootstrap';
-import { NewsContext } from '../../../contexts/NewsContext';
-import { Link } from 'react-router-dom';
-import './Carousel.css';
+import React, { useContext } from "react";
+import { Carousel } from "react-bootstrap";
+import { NewsContext } from "../../../contexts/NewsContext";
+import { Link } from "react-router-dom";
+import "./Carousel.css";
 
 const HeroCarousel = () => {
-    const { news } = useContext(NewsContext);
-    return (
-        <Carousel className="carousel" wrap fade>
-            {news
-                .filter((x) => x.news_type === 'hot')
-                .map((slide, index) => (
-                    <Carousel.Item key={index}>
-                        <Link to={`/news/${slide.id}`}>
-                            <img
-                                src={slide.images[0]}
-                                className="carouselImg"
-                                alt={slide.title}
-                            />
+  // Access the news data from the NewsContext
+  const { news } = useContext(NewsContext);
 
-                            {/* Carousel badge HOT */}
-                            {/* eng */}
-                            {/* <div className="carousel__badge">{slide.news_type} news</div> */}
+  return (
+    <Carousel className="carousel" wrap fade>
+      {/* Filter and map the "hot" news items for the carousel */}
+      {news
+        .filter((x) => x.news_type === "hot")
+        .map((slide, index) => (
+          <Carousel.Item key={index}>
+            {/* Link to the news details page */}
+            <Link to={`/news/${slide.id}`}>
+              {/* Display the news image */}
+              <img
+                src={slide.images[0]}
+                className="carouselImg"
+                alt={slide.title}
+              />
 
-                            {/* bg */}
-                            <div className="carousel__badge">Горещи новини</div>
+              {/* Carousel badge for "HOT" news */}
 
-                            <div className="gradient"></div>
-                        </Link>
-                        <Carousel.Caption>
-                            <Link to={`/news/${slide.id}`}>
-                                <h3 className='carousel__title'>{slide.title}</h3>
-                            </Link>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                ))}
-        </Carousel>
-    );
+              {/* eng */}
+              {/* <div className="carousel__badge">{slide.news_type} news</div> */}
+
+              {/* Bulgarian label */}
+              <div className="carousel__badge">Горещи новини</div>
+
+              {/* Gradient overlay */}
+              <div className="gradient"></div>
+            </Link>
+            <Carousel.Caption>
+              {/* Link to the news details page */}
+              <Link to={`/news/${slide.id}`}>
+                {/* Display the news title */}
+                <h3 className="carousel__title">{slide.title}</h3>
+              </Link>
+            </Carousel.Caption>
+          </Carousel.Item>
+        ))}
+    </Carousel>
+  );
 };
 
 export default HeroCarousel;

@@ -17,7 +17,7 @@
 
 .tabs__btn {
     all: unset;
-    background-color: var(--mainBlack);
+    background-color: var(--mainSecondColor);
     color: white;
     font-weight: bold;
     padding: 10px;
@@ -26,7 +26,7 @@
 }
 
 .tabs__btn:focus {
-    color: var(--mainBlack);
+    color: var(--mainSecondColor);
     border: 1px solid var(--mainColor);
     background-color: var(--mainColor);
 }

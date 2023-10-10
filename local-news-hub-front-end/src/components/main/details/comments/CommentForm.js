@@ -1,15 +1,16 @@
-import { useContext, useState } from 'react';
+import { useContext, useState } from "react";
 
-import { AuthContext } from '../../../../contexts/AuthContext';
+import { AuthContext } from "../../../../contexts/AuthContext";
 
-import './CommentForm.css';
+import "./CommentForm.css";
 
-const url = 'http://localhost:8000/news/';
+// Define the URL for the API endpoint
+const url = "http://localhost:8000/news/";
 
 const CommentForm = (props) => {
   const { user } = useContext(AuthContext);
-  const [content, setContent] = useState('');
-  const [name, setName] = useState('');
+  const [content, setContent] = useState("");
+  const [name, setName] = useState("");
 
   // Get the news ID from the props and convert it to a string
   let newsId = props.news?.id.toString();
@@ -26,64 +27,65 @@ const CommentForm = (props) => {
 
     try {
       // Send a POST request to the API endpoint
-      const response = await fetch(url + 'comments/', {
-        method: 'POST',
+      const response = await fetch(url + "comments/", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           content: content,
           name: name,
           news: newsId,
-          email: userEmail
+          email: userEmail,
         }),
       });
 
       if (response.ok) {
         // Reset the comment fields
-        setContent('');
-        setName('');
+        setContent("");
+        setName("");
 
         // Check if the onCommentCreated prop is a function
-        if (typeof props.onCommentCreated === 'function') {
-
+        if (typeof props.onCommentCreated === "function") {
           // Call the onCommentCreated function and pass the new comment data
-          props.onCommentCreated({ content, name, publication_date_and_time: date });
+          props.onCommentCreated({
+            content,
+            name,
+            publication_date_and_time: date,
+          });
         }
       } else {
         const errorData = await response.json();
-        console.error('Error submitting comment:', errorData);
+        console.error("Error submitting comment:", errorData);
       }
     } catch (error) {
-      console.error('Error submitting comment:', error);
+      console.error("Error submitting comment:", error);
     }
   };
 
   return (
     <div id="form-main">
       <form className="form" id="comment--form" onSubmit={handleFormSubmit}>
-        <div className='text'>
+        <div className="text">
           <textarea
             id="content"
             // eng
             // placeholder='Write your comment here ...'
 
             // bg
-            placeholder='Напишете своя коментар тук...'
-
+            placeholder="Напишете своя коментар тук..."
             value={content}
             onChange={(event) => setContent(event.target.value)}
             required
           />
         </div>
-        <div className='name'>
+        <div className="name">
           <input
             // eng
             // placeholder='Name'
 
             // bg
-            placeholder='Име'
-
+            placeholder="Име"
             type="text"
             id="name"
             value={name}
@@ -95,8 +97,9 @@ const CommentForm = (props) => {
         {/* <button className='submit' type="submit">Send</button> */}
 
         {/* bg */}
-        <button className='submit' type="submit">Остави своя коментар</button>
-
+        <button className="submit" type="submit">
+          Остави своя коментар
+        </button>
       </form>
     </div>
   );

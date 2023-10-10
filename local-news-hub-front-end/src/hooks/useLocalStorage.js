@@ -1,33 +1,43 @@
-import {useState} from 'react';
+import { useState } from "react";
 
+/**
+ * Custom hook for managing state in local storage.
+ *
+ * @param {string} key - The key under which the data is stored in local storage.
+ * @param {any} initialValue - The initial value to use if the data is not found in local storage.
+ * @returns {Array} - An array containing the state and a function to set the state.
+ */
 const useLocalStorage = (key, initialValue) => {
-    // in initial we make nested state wit func and try catch block
-    const [state, setState] = useState(() => {
-        try {
-            // check if item exist
-            let item = localStorage.getItem(key);
+  // Initialize state using a function to handle local storage retrieval and error handling
+  const [state, setState] = useState(() => {
+    try {
+      // Attempt to retrieve an item from local storage using the provided key
+      let item = localStorage.getItem(key);
 
-            // if exist return JSON.parse(item) because in localStorage we save json
-            // else return initial value
-            return item ? JSON.parse(item) : initialValue;
+      // If the item exists in local storage, parse it as JSON and return it as the initial state
+      // If the item doesn't exist, return the provided initialValue
+      return item ? JSON.parse(item) : initialValue;
+    } catch (error) {
+      // If an error occurs during local storage access, return the provided initialValue
+      return initialValue;
+    }
+  });
 
-        } catch (error) {
+  // Function to set the state and save it to local storage
+  const setItem = (value) => {
+    try {
+      // Save the value to local storage as a JSON string
+      localStorage.setItem(key, JSON.stringify(value));
 
-            // if error return initial value
-            return initialValue;
-        }
-    });
+      // Update the state with the new value
+      setState(value);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-    const setItem = (value) => {
-        try {
-            // save to localStorage
-            localStorage.setItem(key, JSON.stringify(value));
-            setState(value);
-        } catch (error) {
-            console.log(error);
-        }
-        // save to state
-    };
-    return [state, setItem];
+  // Return an array containing the state and the setItem function
+  return [state, setItem];
 };
+
 export default useLocalStorage;

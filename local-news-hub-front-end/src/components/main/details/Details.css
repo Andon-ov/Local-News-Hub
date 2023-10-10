@@ -1,5 +1,6 @@
 .details__title {
     text-align: center;
+    color: var(--mainTextColor);
 }
 
 .details__description {
@@ -14,7 +15,7 @@
     gap: 10px;
     justify-content: space-around;
     color: white;
-    background-color: var(--mainBlack);
+    background-color: var(--mainSecondColor);
 }
 
 .details__info p {
@@ -32,6 +33,7 @@
     padding: 40px 50px 80px 50px;
     line-height: 1.5;
     font-family: 'Montserrat', sans-serif;
+    color: var(--mainTextColor);
 }
 
 .details__content .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) {
@@ -55,6 +57,7 @@
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: var(--mainTextColor);
 }
 
 .details__comments-heading {
@@ -62,17 +65,17 @@
     font-weight: 100;
     font-style: italic; */
     margin-bottom: 30px;
-    color: var(--mainBlack);
+    color: var(--mainSecondColor);
     display: flex;
     gap: 20px;
     align-items: center;
+
 }
 
 
 .comment p {
     font-size: 14px;
     line-height: 1.4;
-    color: #333;
 }
 
 .comment-date {
