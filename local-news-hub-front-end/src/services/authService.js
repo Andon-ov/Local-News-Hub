@@ -47,6 +47,7 @@ async function handleResponse(res) {
   } else {
     // if response is ok -> go forward and return data
     let authData = await res.json();
+    console.log(authData);
     return authData;
   }
 }

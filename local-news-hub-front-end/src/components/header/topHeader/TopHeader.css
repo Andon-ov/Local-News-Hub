@@ -1,5 +1,4 @@
 .topHeader {
-
     padding: 0 12.6%;
     font-weight: 500;
     display: flex;
@@ -47,6 +46,8 @@ ul {
 .userButtons {
     display: flex;
     gap: 15px;
+    align-items: center;
+
 }
 
 .userButtons .nav-link:hover {

@@ -1,0 +1,26 @@
+#dropdown-basic {
+    all: unset;
+    display: flex;
+    align-items: center;
+    background-color: unset;
+    color: var(--mainSecondColor);
+}
+
+#dropdown-basic:hover {
+    box-shadow: unset;
+    color: var(--mainColor);
+}
+
+#dropdown-basic:focus-visible {
+    border: unset;
+    box-shadow: unset;
+}
+
+#dropdown-basic:active {
+    border: none;
+    box-shadow: unset;
+}
+
+.dropdown-item:hover {
+    border: none;
+}
